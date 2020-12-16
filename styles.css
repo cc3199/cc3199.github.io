@@ -28,7 +28,6 @@ ul {
 
 li a{
   float: left;
-  display: inline;
   display: block;
   color: white;
   text-align: center;
