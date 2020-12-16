@@ -26,6 +26,7 @@ ul {
 
 li {
   float: left;
+  border-right: 1px solid #bbb
 }
 
 li a{
@@ -37,5 +38,8 @@ li a{
   text-decoration: none;
 }
 li a:hover {
-  background-color: #111;
+  background-color: gray;
+}
+.active {
+  background-color: lightseagreen;
 }
