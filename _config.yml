@@ -8,9 +8,9 @@
 # URL VARIABLES
 #
 # url is your gh-pages base, following the pattern: username.github.io
-url: https://collectionbuilder.github.io
+url: https://cc3199.github.io
 # baseurl is your github repository's name prefixed with a /
-baseurl: /collectionbuilder-gh
+baseurl: /workfiles
 # location of code, the full url to your github repository
 source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
 
@@ -18,14 +18,14 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: CollectionBuilder-GH 
+title: Collection of Chelsea's Workfiles 
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: a template for creating simple digital exhibits
+tagline: to be passed on to other coworkers
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "CollectionBuilder-GH is a template for creating small digital collection exhibits on GitHub Pages designed for teaching digital library skills"
+description: "Keeping my files in an online form is my way of storing to a cloud of sorts and keeping a log of my workflow and using CollectionBuilder. This is also the place that I store documents explaining some Photoshop hints and tricks for archive files. I hope this will be found useful for other coworkers, and should the future hold a job change for me, my replacement."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: CollectionBuilder
+author: Chelsea Pincock
 
 ##########
 # COLLECTION SETTINGS
