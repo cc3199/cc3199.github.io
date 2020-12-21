@@ -1,7 +1,7 @@
 ---
-title: Subjects
-layout: subjects
-permalink: /subjects.html
+title: CollectionBuilder
+layout: collectionbuilder
+permalink: /collectionbuilder.html
 # see theme.yml for options
 # a cloud visualization will be added below the content in this file
 ---
