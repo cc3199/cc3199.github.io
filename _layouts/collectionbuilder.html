@@ -1,4 +1,49 @@
----
-layout: collectionbuilder
----
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
 
+    <div class="container">
+        <table class="table table-hover" style="width: 100%">
+            <thead>
+                <tr>
+                  <th>Links to Documentation</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://collectionbuilder.github.io/" class="btn btn-info" role="button" target="_blank">Basic CollectionBuilder Docs</a></td>
+                  <td>This link leads to the CollectionBuilder website. Here, you can find out more about the different templates and access a step-by-step guide to getting started using CollectionBuilder starting with program installation until site deployment. Just select the 'Get Started' button on the navigation bar to begin the tutorial.</td>
+                </tr>
+                <tr>
+                  <td><a href="add-deletepage.html" class="btn btn-info" role="button">Adding and Deleting Web Pages</a></td>
+                  <td>Anyone familiar with website development should already know how this works. This tutorial will inform how to add or delete pages to the website from within the perspective of CollectionBuilder. It covers how to add or delete a page from the navigation bar, and how to add a page using a page link.</td>
+                </tr>
+                <tr>
+                  <td><a href="metadatatext.html" class="btn btn-info" role="button">Metadata Modifications Shortcuts</a></td>
+                  <td>Most of MBMG collection metadata has some text capitalization issues when put into a website, such as the titles being in all-caps. This walks through shortcuts to change this to proper capitalization display using both Visual Studio Code and Microsoft Excel. A couple capitalization issues also has to do with the code itself that can be easily tweaked.</td>
+                </tr>
+                <tr>
+                  <td><a href="logoandfavicon.html" class="btn btn-info" role="button">Favicon and Logos</a></td>
+                  <td>A favicon is the small icon that appears on the tab in the web browser. This tutorial covers how to change this icon as well as how to change the logos on CollectionBuilder to become the MBMG logos that look best and where they look best.</td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+
+    </main>
+    {% include footer.html %}
+    {% include foot.html %}
+    {% include scroll-to-top.html %}
+  </body>
+</html>
