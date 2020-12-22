@@ -6,4 +6,4 @@ permalink: /photoshop.html
 # a cloud visualization will be added below the content in this file
 ---
 
-## Browse Locations
+Here you can access all of my tutorials on how to complete certain tasks on Adobe Photoshop to accomplish MBMG archive protocol. 

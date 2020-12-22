@@ -8,8 +8,35 @@
     {% include collection-banner.html %}
     {% include collection-nav.html %}
     
-    
-    
+    <h1>Photoshop Tips and Tricks</h1>
+
+    {{content}}
+
+    <div class="container">
+        <table class="table table-hover" style="width: 100%">
+            <thead>
+                <tr>
+                  <th>Link to Documentation</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="scriptsandmacros.html" class="btn btn-info" role="button">Scripts and Macros</a></td>
+                  <td>Macros and Scripts in photoshop are simple to create (no writing code!) and are very useful at applying the same commands to a mass of documents such as file conversion, changing image size, and applying edits easily applied to every document.</td>
+                </tr>
+                <tr>
+                  <td><a href="filecleaning.html" class="btn btn-info" role="button">File Cleaning Tips</a></td>
+                  <td>These walkthroughs explain some tips and hints to help with document cleaning for MBMG archive protocols. These walkthroughs include  changing image size, tools for cleaning legibility and alignment, and proper saving methods.</td>
+                </tr>
+                <tr>
+                  <td><a href="shortcuts.html" class="btn btn-info" role="button">Other Photoshop Shortcuts</a></td>
+                  <td>These documents go through keyboard shortcuts to different tools commonly used for MBMG archive document cleaning such as changing brush size, duplicating layers, and color adjustments.</td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+
     {% include footer.html %}
     {% include foot.html %}
     {% include scroll-to-top.html %}
