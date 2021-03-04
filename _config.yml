@@ -18,12 +18,12 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: Collection of Chelsea's Workfiles 
+title: MBMG CollectionBuilder
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: to be passed on to other coworkers
+tagline:
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "Keeping my files in an online form is my way of storing to a cloud of sorts and keeping a log of my workflow and using CollectionBuilder. This is also the place that I store documents explaining some Photoshop hints and tricks for archive files. I hope this will be found useful for other coworkers, and should the future hold a job change for me, my replacement."
+description: "This site containes information needed to create/edit a CollectionBuilder collection for MBMG. These walkthroughs will include links to the CollectionBuilder documentation in addition to how these steps have been modified for MBMG use."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: Chelsea Pincock
 
