@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <main id="maincontent" role="main" class="flex-shrink-0">
+        <div class="container">
+        <div class="card mb-9">
+            <h1 style="text-align:center">When creating a new collection, please follow each of these steps. For simply adding items to a collection, please follow the instructions in the last two links on this page.</h1>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="text-align:center"><a href="#setup">Getting Set Up</a>
+                <li class="list-group-item" style="text-align:center"><a href="#config">Config.yml file</a>
+                <li class="list-group-item" style="text-align:center"><a href="#theme">Theme.yml file</a>
+                <li class="list-group-item" style="text-align:center"><a href="#navigation">Navigation Bar Titles</a>
+                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#infographic">Display of Home Page</a>
+                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#back">Back to Collections button</a>
+                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#objects">Adding Objects</a>
+                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#metadata">Adding Metadata</a>
+                </ul>
+        </div>
+        
+        <div class="container">
+            <h2 id="setup">How to Get Set Up</h2>
+            <div class="alert alert-warning" role="alert">
+                For general info about this, see the <a href="https://collectionbuilder.github.io/docs/repository.html#intro" target="_blank">CollectionBulder docs</a>.
+            </div>
+              <ol>
+                <li>Create a repository. Please use <a href="https://collectionbuilder.github.io/docs/repository.html#create" target="_blank">CB docs</a> for this step.
+                </li><br>
+                
+                <li>Create a branch. For this step go to <a href="https://github.com/cc3199/mbmg-master" target="_blank">the MBMG Github Master code</a> Then select the dropdown button that says "master".
+                <br>
+                  <img class="rounded mx-auto d-block" src="{{ '/objects/new branch.jpg' | absolute_url }}">
+                </li><br>
+      
+                <li>In the space in the dropdown, type the name of your collection and select to "create branch."<br>
+                  <img class="rounded mx-auto d-block" src="{{ '/objects/branch name.jpg' | absolute_url }}">
+                </li><hr>
+              </ol>
+              <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through how to customize the online collection to fit your collection.</div>
+          </div>
+
+    <div class="container">
+      <h2 id="config">Modifications to Config.yml File</h2>
+      <div class="alert alert-warning" role="alert">
+        For general info about this file, see the <a href="https://collectionbuilder.github.io/docs/config.html" target="_blank">CollectionBulder docs</a>
+      </div>
+        <ol>
+          <li>To begin, locate and open the _config.yml file in the base of your repository. No matter which version you’re using, this file is used to configure the basics of your site.
+            <img class="rounded mx-auto d-block" src="{{ '/objects/crop1.jpg' | absolute_url }}">
+          </li><br>
+          
+          <li>Mark off the area you do not want removed. This can be done by holding the left mouse button and dragging across the scan. The area to be removed will be “blacked out”.<br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/crop2.jpg' | absolute_url }}">
+          </li><br>
+
+          <li>After marking off the area to be cropped, click on the check icon on the top center of the toolbar to apply changes. The cancel icon will cancel all changes made.<br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/crop3.jpg' | absolute_url }}">
+          </li><hr>
+        </ol>
+    </div>
