@@ -15,14 +15,14 @@
     <main id="maincontent" role="main" class="flex-shrink-0">
         <div class="container">
         <div class="card mb-9">
-            <h1 style="text-align:center">When creating a new collection, please follow each of these steps. For simply adding items to a collection, please follow the instructions in the last two links on this page.</h1>
+            <h1 style="text-align:center">When creating a new collection, please follow each of these steps. For simply adding items to a collection, please follow the instructions in the last two links below.</h1>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" style="text-align:center"><a href="#setup">Getting Set Up</a>
+                <li class="list-group-item" style="text-align:center"><a href="#open">Opening Collection in Text Editor</a>
                 <li class="list-group-item" style="text-align:center"><a href="#config">Config.yml file</a>
                 <li class="list-group-item" style="text-align:center"><a href="#theme">Theme.yml file</a>
                 <li class="list-group-item" style="text-align:center"><a href="#navigation">Navigation Bar Titles</a>
                 <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#infographic">Display of Home Page</a>
-                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#back">Back to Collections button</a>
                 <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#objects">Adding Objects</a>
                 <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#metadata">Adding Metadata</a>
                 </ul>
@@ -30,41 +30,49 @@
         
         <div class="container">
             <h2 id="setup">How to Get Set Up</h2>
-            <div class="alert alert-warning" role="alert">
-                For general info about this, see the <a href="https://collectionbuilder.github.io/docs/repository.html#intro" target="_blank">CollectionBulder docs</a>.
+            <div class="alert alert-info" role="alert">
+                For general info about this, see the <a href="https://collectionbuilder.github.io/docs/repository.html#intro" target="_blank">CollectionBulder docs</a>. Make sure to follow instructions for SA users and ignore instructions for GH and Skin.
             </div>
+            <div class="alert alert-danger" role="alert">
+              Make sure you have all of the <a href="https://collectionbuilder.github.io/docs/software.html" target="_blank">software installed</a> for the next steps, especially <a href="https://desktop.github.com/" target="_blank">Github Desktop</a>.
+          </div>
               <ol>
-                <li>Create a repository. Please use <a href="https://collectionbuilder.github.io/docs/repository.html#create" target="_blank">CB docs</a> for this step.
+                <li>Clone the Master branch, if you haven't already. If you have already done this when making a different collection, you do not have to do this again. Go to <a href="https://github.com/cc3199/mbmg-master" target="_blank">the MBMG Github Master code</a>Then you will go to the "code" dropdown and select "Open in Github Desktop. Ensure you have Github Desktop installed before completing this step.
+                  <img class="rounded mx-auto d-block" src="{{ '/objects/clone master.jpg' | absolute_url }}"><br>
+                This will then bring up Github Desktop and a prompt will ask where you want the files to be saved. Ususally the default location is fine, but, if the default location does not suit your organization style, you may select a different location and then select "ok."<br>
+                <div class="alert alert-info" role="alert">
+                  By the way, the master code is a template of sorts for all other collections. Do not edit the master code unless something needs to be changed across ALL collections. You will be creating "branches" that come from the master code and edits unique to that branch will remain in that branch. It will not affect other collections in other branches. For more information about how GitHub branches work, see their <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches" target="_blank">documentation.</a>
+              </div>
                 </li><br>
                 
-                <li>Create a branch. For this step go to <a href="https://github.com/cc3199/mbmg-master" target="_blank">the MBMG Github Master code</a> Then select the dropdown button that says "master".
+                <li>Once you have cloned the master, it will auto-open in Github Desktop. Then, you'll create a branch based off the master code. To do this, make sure you are in the mbmg-master repository, then move slightly to the right to select a dropdown menu under "current branch". In this dropdown menu, you will see all of the existing branches, or collections, created from the mbmg-master. To create a new one, type the name of your collection in the typing box at the top and then select "New Branch."
                 <br>
                   <img class="rounded mx-auto d-block" src="{{ '/objects/new branch.jpg' | absolute_url }}">
                 </li><br>
       
-                <li>In the space in the dropdown, type the name of your collection and select to "create branch."<br>
-                  <img class="rounded mx-auto d-block" src="{{ '/objects/branch name.jpg' | absolute_url }}">
-                </li><hr>
+                <li>Now you will have a new branch based from the mbmg-master where you will have your collection. Your Github Desktop should look like this:<br>
+                  <img class="rounded mx-auto d-block" src="{{ '/objects/publish branch.jpg' | absolute_url }}"><br>
+                Make sure to "Publish branch," which will save it to Github online where it will be viewable online and will be saved in multiple places for security.</li><br>
               </ol>
-              <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through how to customize the online collection to fit your collection.</div>
+              <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through opening the files in your text editor to then be able to customize your collection.</div>
+              <hr>
           </div>
 
-    <div class="container">
+<div class="container">
+    <h2 id="open">Opening Collection In Text Editor</h2>
+    <p>In GitHub Desktop, navigate to the "Repository" tab at the top, and then select "Open in Text-Editor". It may also say "Open in Visual Studio Code" or name your default text editor. After selecting this, it will bring up your collection web files and you can begin editing.</p>
+    <img class="rounded mx-auto d-block" src="{{ '/objects/open in text.jpg' | absolute_url }}">
+    <hr><br>
+</div>
+  <div class="container">
       <h2 id="config">Modifications to Config.yml File</h2>
       <div class="alert alert-warning" role="alert">
         For general info about this file, see the <a href="https://collectionbuilder.github.io/docs/config.html" target="_blank">CollectionBulder docs</a>
       </div>
         <ol>
           <li>To begin, locate and open the _config.yml file in the base of your repository. No matter which version you’re using, this file is used to configure the basics of your site.
-            <img class="rounded mx-auto d-block" src="{{ '/objects/crop1.jpg' | absolute_url }}">
+            <img class="rounded mx-auto d-block" src="{{ '/objects/locate config.jpg' | absolute_url }}">
           </li><br>
-          
-          <li>Mark off the area you do not want removed. This can be done by holding the left mouse button and dragging across the scan. The area to be removed will be “blacked out”.<br>
-            <img class="rounded mx-auto d-block" src="{{ '/objects/crop2.jpg' | absolute_url }}">
-          </li><br>
-
-          <li>After marking off the area to be cropped, click on the check icon on the top center of the toolbar to apply changes. The cancel icon will cancel all changes made.<br>
-            <img class="rounded mx-auto d-block" src="{{ '/objects/crop3.jpg' | absolute_url }}">
-          </li><hr>
         </ol>
+        <hr>
     </div>
