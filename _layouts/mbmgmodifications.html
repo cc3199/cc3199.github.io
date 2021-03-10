@@ -18,45 +18,52 @@
             <h1 style="text-align:center">When creating a new collection, please follow each of these steps. For simply adding items to a collection, please follow the instructions in the last two links below.</h1>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" style="text-align:center"><a href="#setup">Getting Set Up</a>
+                <li class="list-group-item" style="text-align:center"><a href="#metadata">Creating Metadata</a> 
                 <li class="list-group-item" style="text-align:center"><a href="#open">Opening Collection in Text Editor</a>
                 <li class="list-group-item" style="text-align:center"><a href="#config">Config.yml file</a>
                 <li class="list-group-item" style="text-align:center"><a href="#theme">Theme.yml file</a>
-                <li class="list-group-item" style="text-align:center"><a href="#navigation">Navigation Bar Titles</a>
-                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#infographic">Display of Home Page</a>
-                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#objects">Adding Objects</a>
-                <li class="list-group-item" style="text-align:center"><p style="text-align:center"><a href="#metadata">Adding Metadata</a>
+                <li class="list-group-item" style="text-align:center"><a href="#addmetadata">Adding Metadata</a>
+                <li class="list-group-item" style="text-align:center"><a href="#objects">Adding Objects</a>
                 </ul>
         </div>
         
-        <div class="container">
-            <h2 id="setup">How to Get Set Up</h2>
-            <div class="alert alert-info" role="alert">
-                For general info about this, see the <a href="https://collectionbuilder.github.io/docs/repository.html#intro" target="_blank">CollectionBulder docs</a>. Make sure to follow instructions for SA users and ignore instructions for GH and Skin.
-            </div>
-            <div class="alert alert-danger" role="alert">
-              Make sure you have all of the <a href="https://collectionbuilder.github.io/docs/software.html" target="_blank">software installed</a> for the next steps, especially <a href="https://desktop.github.com/" target="_blank">Github Desktop</a>.
-          </div>
-              <ol>
-                <li>Clone the Master branch, if you haven't already. If you have already done this when making a different collection, you do not have to do this again. Go to <a href="https://github.com/cc3199/mbmg-master" target="_blank">the MBMG Github Master code</a>Then you will go to the "code" dropdown and select "Open in Github Desktop. Ensure you have Github Desktop installed before completing this step.
-                  <img class="rounded mx-auto d-block" src="{{ '/objects/clone master.jpg' | absolute_url }}"><br>
-                This will then bring up Github Desktop and a prompt will ask where you want the files to be saved. Ususally the default location is fine, but, if the default location does not suit your organization style, you may select a different location and then select "ok."<br>
-                <div class="alert alert-info" role="alert">
-                  By the way, the master code is a template of sorts for all other collections. Do not edit the master code unless something needs to be changed across ALL collections. You will be creating "branches" that come from the master code and edits unique to that branch will remain in that branch. It will not affect other collections in other branches. For more information about how GitHub branches work, see their <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches" target="_blank">documentation.</a>
-              </div>
-                </li><br>
+<div class="container">
+  <h2 id="setup">How to Get Set Up</h2>
+    <div class="alert alert-info" role="alert">
+                For general info about this, see the <a href="https://collectionbuilder.github.io/docs/repository.html#intro" target="_blank"><b>CollectionBulder docs</b></a>. Make sure to follow instructions for SA users and ignore instructions for GH and Skin.
+    </div>
+  <div class="alert alert-danger" role="alert">
+              Make sure you have all of the <a href="https://collectionbuilder.github.io/docs/software.html" target="_blank"><b>software installed</b></a> for the next steps, especially <a href="https://desktop.github.com/" target="_blank"><b>Github Desktop</b></a>.
+  </div>
+  <ol>
+    <li>Clone the Master branch, if you haven't already. If you have already done this when making a different collection, you do not have to do this again. Go to <a href="https://github.com/cc3199/mbmg-master" target="_blank"><b>the MBMG Github Master code.</b></a> Then you will go to the "code" dropdown and select "Open in Github Desktop". Ensure you have Github Desktop installed before completing this step.
+      <img class="rounded mx-auto d-block" src="{{ '/objects/clone master.jpg' | absolute_url }}"><br>
+      This will then bring up Github Desktop and a prompt will ask where you want the files to be saved. Ususally the default location is fine, but, if the default location does not suit your organization style, you may select a different location and then select "ok."<br>
+      <div class="alert alert-info" role="alert">
+      By the way, the master code is a template of sorts for all other collections. Do not edit the master code unless something needs to be changed across ALL collections. You will be creating "branches" that come from the master code and edits unique to that branch will remain in that branch. It will not affect other collections in other branches. For more information about how GitHub branches work, see their <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches" target="_blank"><b>documentation.</b></a>
+      </div>
+    </li><br>
                 
-                <li>Once you have cloned the master, it will auto-open in Github Desktop. Then, you'll create a branch based off the master code. To do this, make sure you are in the mbmg-master repository, then move slightly to the right to select a dropdown menu under "current branch". In this dropdown menu, you will see all of the existing branches, or collections, created from the mbmg-master. To create a new one, type the name of your collection in the typing box at the top and then select "New Branch."
-                <br>
-                  <img class="rounded mx-auto d-block" src="{{ '/objects/new branch.jpg' | absolute_url }}">
-                </li><br>
+    <li>Once you have cloned the master, it will auto-open in Github Desktop. Then, you'll create a branch based off the master code. To do this, make sure you are in the mbmg-master repository, then move slightly to the right to select a dropdown menu under "current branch". In this dropdown menu, you will see all of the existing branches, or collections, created from the mbmg-master. To create a new one, type the name of your collection in the typing box at the top and then select "New Branch."
+    <br>
+      <img class="rounded mx-auto d-block" src="{{ '/objects/new branch.jpg' | absolute_url }}">
+    </li><br>
       
-                <li>Now you will have a new branch based from the mbmg-master where you will have your collection. Your Github Desktop should look like this:<br>
-                  <img class="rounded mx-auto d-block" src="{{ '/objects/publish branch.jpg' | absolute_url }}"><br>
-                Make sure to "Publish branch," which will save it to Github online where it will be viewable online and will be saved in multiple places for security.</li><br>
-              </ol>
-              <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through opening the files in your text editor to then be able to customize your collection.</div>
-              <hr>
-          </div>
+    <li>Now you will have a new branch based from the mbmg-master where you will have your collection. Your Github Desktop should look like this:<br>
+      <img class="rounded mx-auto d-block" src="{{ '/objects/publish branch.jpg' | absolute_url }}"><br>
+    Make sure to "Publish branch," which will save it to Github online where it will be viewable online and will be saved in multiple places for security.</li><br>
+    </ol>
+    <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through opening the files in your text editor to then be able to customize your collection.</div>
+    <hr>
+</div>
+
+<div class="container">
+  <h2 id="metadata">Creating Metadata</h2>
+  <p>The metadata is the most important file for CollectionBuilder. The site will not load images or documents from your collection without it. Also, if you find any errors in the website such as a misspelling or an image not loading, it is most likely going to be due to an error in the metadata.</p>
+  <p>The metadata file is basically a spreadsheet that describes all of the info about each object within the collection.If an object is properly described within this metadata file, it will appear in the website, and will it be searchable. Carefully follow the steps <a href="https://collectionbuilder.github.io/docs/metadata.html" target="_blank"><b>here</b></a> to create metadata for your collection, and remember to follow any special instructions for SA users!</p>
+  <div class="alert alert-info" role="alert">
+  If you don't need to create a new metadata file and add metadata content to an existing file instead, please see the instructions on this page about <a href="{{ '/mbmgmodifications.html#addmetadata' | absolute_url }}"><b>adding to existing metadata.</b></a>
+</div>
 
 <div class="container">
     <h2 id="open">Opening Collection In Text Editor</h2>
@@ -64,15 +71,81 @@
     <img class="rounded mx-auto d-block" src="{{ '/objects/open in text.jpg' | absolute_url }}">
     <hr><br>
 </div>
-  <div class="container">
+  
+<div class="container">
       <h2 id="config">Modifications to Config.yml File</h2>
       <div class="alert alert-warning" role="alert">
-        For general info about this file, see the <a href="https://collectionbuilder.github.io/docs/config.html" target="_blank">CollectionBulder docs</a>
+        For general info about this file, see the <a href="https://collectionbuilder.github.io/docs/config.html" target="_blank"><b>CollectionBulder docs</b></a>
       </div>
         <ol>
           <li>To begin, locate and open the _config.yml file in the base of your repository. No matter which version you’re using, this file is used to configure the basics of your site.
             <img class="rounded mx-auto d-block" src="{{ '/objects/locate config.jpg' | absolute_url }}">
           </li><br>
+
+          <li>The first section titled "URL Variables" will <b>NOT</b> need to be changed. The following section titled "Site Settings" is where the primary changes will be made in this file. Make sure to delete the existing template text in red, and replace it with your own. 
+            <ul>
+              <li><b>Title:</b> The title of your collection. This will appear as the title on the home page and on each page's header. </li>
+              <li><b>Tagline:</b> A subtitle of sorts. This will appear underneath the title on the homepage and each page's header.</li>
+              <li><b>Description:</b> A couple of sentences or a paragraph briefly describing the collection. This appears on the home page under the featured banner image.</li>
+              <li><b>Author:</b> You may add your name to the MBMG or simply leave as MBMG.
+              <li><b>Keywords:</b> Enter a few keywords that match your collection separated by a semicolon, such as montana;geology;photographs; etc.</li>
+            </ul>
+            <div class="alert alert-danger" role="alert">
+              The organization name, link, logo-banner, and logo-nav DO NOT need to be changed. This has already been entered in correctly for MBMG use.
+            </div><br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/site settings.jpg' | absolute_url }}">
+          </li><br>
+
+          <li>The following section titled "Collection Settings" only has two components that need to be configured, both dealing with metadata.The first one titled 'metadata' should be changed to the filename of the metadata document created in an earlier step. Be sure to not include the file extension (which should be .csv). <br>
+          Second, under "page_gen," next to "data", again replace the demo metadata with the metadata filename that you created.
+          <img class="rounded mx-auto d-block" src="{{ '/objects/collection settings.jpg' | absolute_url }}">
+        </li>
         </ol>
         <hr>
     </div>
+
+<div class="container">
+  <h2 id="theme">Modifications to the theme.yml file</h2>
+    <p>This file deals mostly with the appearances and images that are displayed on the web pages as well as many other edits. Please follow the <a href="https://collectionbuilder.github.io/docs/theme.html" target="_blank">CollectionBuilder documentation</a> for help with this file. Reminder to follow any special instructions for SA users.</p>
+      <div class="alert alert-info" role="alert">
+        The map page coordinates and zoom should be set to have all of Montana as front and center. This should work for most collections. If your collection should be more localized or it features items in another location, follow CollectionBuilder instructions to change.
+      </div><br>
+      <img class="rounded mx-auto d-block" src="{{ '/objects/theme.jpg' | absolute_url }}">
+  <hr><br>
+</div>
+
+<div class="container">
+  <h2 id="addmetadata">Adding to Existing Metadata</h2>
+  <ol>
+    <li>The easiest way to add metadata is to open the metadata file into a program such as Excel. First, locate your metadata file in your text editor. In this case, the metadata file is the demo-metadata. Right click on the file and select to "Reveal in File Explorer."
+      <img class="rounded mx-auto d-block" src="{{ '/objects/locate metadata.jpg' | absolute_url }}"><br>
+    This will open your collection files, specifically the "_data" folder where all of the .csv files are stored. Again, locate your collection metadata file and choose to open it in Excel, or other spreadsheet program you are familiar with.
+      <img class="rounded mx-auto d-block" src="{{ '/objects/open in excel.jpg' | absolute_url }}"><br>  
+    </li>
+
+    <li>Once the file is open, you will see what metadata has already been entered for the previous objects. Follow the same format and patterns as the existing data for your new data. If you need a refresher as to what data is necessary and how to enter it in, see the <a href="https://collectionbuilder.github.io/docs/metadata.html" target="_blank"><b>CollectionBuilder documentation</b></a>.
+    </li>
+  </ol>
+</div><hr><br>
+
+<div class="container">
+  <h2 id="objects">Adding Objects</h2>
+  <ol>
+    <li>When adding your collection objects to CollectionBuilder, ensure all of your files match your metadata especially in the "type" and "format" columns, otherwise the objects will display properly on the website. Take all of you collection files and copy and paste them in to the "objects" folder. Your files should be OUTSIDE the "small" and "thumbs" folder. Those will come into play next. Feel free to delete the demo objects; they are solely for demonstration.
+      <img class="rounded mx-auto d-block" src="{{ '/objects/objects.jpg' | absolute_url }}">
+    </li><br>
+
+    <li>Next, you will be duplicating the objects into the "small" and "thumbs" folders. Luckily, all of the <a href="http://localhost:4000/workfiles/softwareinstall.html"><b>software dependencies</b></a> installed earlier will do all of this for you with a simple script. First, open the terminal in your text editor. In Visual Studio Code, navigate to the "View" tab and down to "Terminal."
+      <img class="rounded mx-auto d-block" src="{{ '/objects/terminal.jpg' | absolute_url }}"><br>
+
+    Then, in the terminal, type <code>rake generate_derivatives</code>. This will take all of your objects and move them into the "small" and "thumbs" folders while putting them into the correct format as well. It will take a moment up to a few minutes depending on how many objects you put in. This will only work if your file names properly match the filenames in the metadata. Watch the terminal as it will tell you if any objects failed to convert. If any did fail, double check that your file names match what is entered into the metadata.
+    </li>
+  </ol>
+  </div><hr><br>
+
+</main>
+{% include footer.html %}
+{% include foot.html %}
+{% include scroll-to-top.html %}
+</body>
+</html>
