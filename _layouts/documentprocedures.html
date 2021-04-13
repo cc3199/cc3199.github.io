@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
+    
+    <main id="maincontent" role="main" class="flex-shrink-0">
+        <div class="container">
+        <div class="card mb-9">
+            <h2 style="text-align:center">Follow links below for document procedures.</h2>
+                <a class="btn btn-secondary btn-lg btn-block" href="#filenaming" role="button">File Naming Instructions</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#restoration" role="button">Document Restoration</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#cleaning" role="button">Document Cleaning</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Style Sheet</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">PDFA Guide</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Print PDF Without Custom Sizes</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Creating Macros</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Macro Steps</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Using Batch to Process Files</a>
+        </div><hr><br>
+        
+        <div class="container">
+            <h2 id="filenaming">File Naming Instructions</h2>
+        <iframe src="objects/File Naming Instructions.pdf" width="100%" height="1000px"></iframe>
+        <hr><br>
+
+        <div class="container">
+            <h2 id="restoration">Document Restoration</h2>
+        <iframe src="objects/Document_Restoration.pdf" width="100%" height="800px"></iframe>
+        <hr><br>
+
+        <div class="container">
+            <h2 id="cleaning">Document Cleaning</h2>
+        <iframe src="objects/Document Cleaning.pdf" width="100%" height="1000px"></iframe>
+        <hr><br>
+
+
+
+    </main>
+{% include footer.html %}
+{% include foot.html %}
+{% include scroll-to-top.html %}
+</body>
+</html>
