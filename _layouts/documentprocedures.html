@@ -16,34 +16,67 @@
         <div class="container">
         <div class="card mb-9">
             <h2 style="text-align:center">Follow links below for document procedures.</h2>
+                <a class="btn btn-secondary btn-lg btn-block" href="#stylesheet" role="button">Style Sheet</a>    
                 <a class="btn btn-secondary btn-lg btn-block" href="#filenaming" role="button">File Naming Instructions</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#restoration" role="button">Document Restoration</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#cleaning" role="button">Document Cleaning</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Style Sheet</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">PDFA Guide</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Print PDF Without Custom Sizes</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Creating Macros</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Macro Steps</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Using Batch to Process Files</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#pdfa" role="button">PDF/A Instructions</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#printpdf" role="button">Print PDF Without Custom Sizes</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#pdftojpg" role="button">How to Batch Convert PDF to JPG</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#tifftojpg" role="button">How to Batch Convert TIFF to JPG</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#batchedits" role="button">How to Conduct Batch Edits to JPGs</a>
+        </div><hr><br>
+        
+        <div class="container">
+            <h2 id="stylesheet">Style Sheet</h2>
+        <iframe src="objects/Style Sheet.pdf" width="100%" height="1000px"></iframe>
         </div><hr><br>
         
         <div class="container">
             <h2 id="filenaming">File Naming Instructions</h2>
         <iframe src="objects/File Naming Instructions.pdf" width="100%" height="1000px"></iframe>
-        <hr><br>
+        </div><hr><br>
 
         <div class="container">
             <h2 id="restoration">Document Restoration</h2>
         <iframe src="objects/Document_Restoration.pdf" width="100%" height="800px"></iframe>
-        <hr><br>
+        </div><hr><br>
 
         <div class="container">
             <h2 id="cleaning">Document Cleaning</h2>
         <iframe src="objects/Document Cleaning.pdf" width="100%" height="1000px"></iframe>
-        <hr><br>
+        <br><br>
+        <a class="btn btn-info btn-lg btn-block" href="filecleaning.html" role="button">Cleaning Documents in Photoshop</a>
+        </div><hr><br>
+        
+        <div class="container">
+            <h2 id="pdfa">PDF/A Instructions</h2>
+        <iframe src="objects/PDFA Guide.pdf" width="100%" height="1000px"></iframe>
+        </div><hr><br>
 
+        <div class="container">
+            <h2 id="printpdf">Printing as PDF</h2>
+        <iframe src="objects/Print PDF Without Custom Sizes.pdf" width="100%" height="800px"></iframe>
+        </div><hr><br>
 
-
+        <div class="container">
+            <h2 id="pdftojpg">How to Batch Convert PDF to JPG</h2>
+            <ol>
+                <li>Go to File>Scripts>Image Processor.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
+                
+                <li>The image processor has four steps:</li>
+                <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_4.jpg' | absolute_url }}"><br>
+                    <ol>
+                        <li>Select the images to process: select the folder that you want Photoshop to batch file convert.</li>
+                        <li>Select the location to save processed images: select the folder that you want Photoshop to save the converted files.</li>
+                        <li>File type: select save as JPEG as it is selected by default. Then check the box ‘Resize to Fit’. You can then fill out the boxes that allow you to set the <b>pixel (not inches)</b> dimensions that you want your converted files to be. (8.5in x 11in is equal to 2550px x 3300px)</li>
+                        <li>Preferences: deselect everything</li>
+                    </ol><br>
+                
+                <li>Select ‘Run’ and let Photoshop do all of the work for you!</li>
+            </ol>
+        </div><hr><br>
     </main>
 {% include footer.html %}
 {% include foot.html %}
