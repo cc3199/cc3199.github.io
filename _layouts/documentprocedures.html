@@ -24,7 +24,7 @@
                 <a class="btn btn-secondary btn-lg btn-block" href="#printpdf" role="button">Print PDF Without Custom Sizes</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#pdftojpg" role="button">How to Batch Convert PDF to JPG</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#tifftojpg" role="button">How to Batch Convert TIFF to JPG</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#batchedits" role="button">How to Conduct Batch Edits to JPGs</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#batchedits" role="button">How to Conduct Batch Edits with Macros</a>
         </div><hr><br>
         
         <div class="container">
@@ -76,6 +76,22 @@
                 
                 <li>Select ‘Run’ and let Photoshop do all of the work for you!</li>
             </ol>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="tifftojpg">How to Batch Convert TIFF to JPG</h2>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="batchedits">How to Conduct Batch Edits with Macros</h2>
+            <ol>
+                <li>Go to Windows>Actions and select the new action icon in the little actions window.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_1.jpg' | absolute_url }}"></li><br>
+                
+                <li>Name your action something you will remember for said action, such as Pdf to Jpg. Make sure the record button is red, meaning it is recording. Then open a file in Photoshop that you wish to convert. Convert the file manually as you normally would (File>Save As and named properly with file extension as PDF and saving to the folder you wish to save it to). Then close your document (don’t close photoshop). Also, don’t stop recording until after you have closed your document.</li><br>
+                
+                <li>In Photoshop, go to Window>Actions and stop recording by selecting the square icon in the little actions window.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_2.jpg' | absolute_url }}"></li><br>
         </div><hr><br>
     </main>
 {% include footer.html %}
