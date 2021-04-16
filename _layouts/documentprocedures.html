@@ -74,17 +74,21 @@
                 If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
             </div>
             <ol>
-                <li>Open the files you want to convert in Photoshop. This works best if you're converting a pdf file that contains multiple pages.</li><br>
+                <li>Open the files you want to convert in Photoshop. This works best if you're converting a pdf file that contains multiple pages. Right-click on the file you want to convert, and open with Photoshop.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/open in photoshop.jpg' | absolute_url }}"></li><br>
+                <li>Hold down the <code>Shift</code> key and select the last page. This will select all of the pages.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/importpdf.jpg' | absolute_url }}"></li><br>
                 <li>Go to File>Automate>Batch.
                     <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
                 
                 <li>Fill out the form as indicated in the image below:</li>
                 <img class="rounded mx-auto d-block" src="{{ '/objects/batch_saveasjpg.png' | absolute_url }}"><br>
                     <ol>
-                        <li>Under file naming, use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your files.
+                        <li>Under file naming, use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
+                        <li>Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.</li>
                     </ol><br>
                 
-                <li>Select ‘Run’ and let Photoshop do all of the work for you!</li>
+                <li>Select ‘OK’ and let Photoshop do all of the work for you!</li>
             </ol>
         </div><hr><br>
 
@@ -93,7 +97,7 @@
         </div><hr><br>
 
         <div class="container">
-            <h2 id="batchedits">How to Conduct Batch Edits with Macros</h2>
+            <h2 id="batchedits">How to Create and Conduct Batch Edits with Macros</h2>
             <div class="alert alert-danger" role="alert">
                 If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
             </div>
@@ -107,15 +111,23 @@
                 <li>Name your action something simple that describes your action and then press "Record."
                     <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros2.jpg' | absolute_url }}"></li><br>
                     <ul>
-                        <li>Open a file in Photoshop that you wish to convert. Convert the file manually as you normally would. Keep in mind that it has to be done perfectly when recording; no undoing is allowed.</li>
-                        <li>Then close your document (don’t close photoshop). Also, don’t stop recording until after you have closed your document.</li>
-                    </ul>
-                </li><br>
+                        <li>Open a file in Photoshop to which you want to do a batch edit. Keep in mind that it has to be done perfectly when recording; no undoing is allowed.</li>
+                    </ul><br>
+                <li>Once finished conducting all of the edits manually, press the square button in the Action Window to stop recording.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros4.jpg' | absolute_url }}">
+                </li>
+                <li>Go to File>Automate>Batch.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
                 
-                <li>In Photoshop, go to Window>Actions and stop recording by selecting the square icon in the little actions window.
-                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_2.jpg' | absolute_url }}"></li><br>
-
-                <li>Finally, select this macro from the list and press "Play."</li>
+                <li>Fill out the following form as necessary.</li>
+                    <ul>
+                        <li>Select the correct Action, or the action you just created.</li>
+                        <li>Source: You may choose to have the macro apply to files you have opened or entire files an specific folder. Your choice.</li>
+                        <li>Destination: You may choose "Save and Close," which will save and close the file in the same location in which it was opened. Or you may choose "Folder" to specify a different folder to save all the edited pages.</li>
+                        <li>File Naming: You may be able to auto-name your files as long as a single file name can apply to all of the files to go through the macro. Be sure to add a serial number if that is the case.</li>
+                        <li>Make any other settings that you may find applicable to your files.</li>
+                    </ul>
+                <li>Select OK and let Photoshop do the work for you!</li>
         </div><hr><br>
     </main>
 {% include footer.html %}
