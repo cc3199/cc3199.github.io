@@ -22,6 +22,7 @@
                 <a class="btn btn-secondary btn-lg btn-block" href="#cleaning" role="button">Document Cleaning</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#pdfa" role="button">PDF/A Instructions</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#printpdf" role="button">Print PDF Without Custom Sizes</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#installcleaner" role="button">Install Document Cleaner 2.0</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#pdftojpg" role="button">How to Batch Convert PDF to JPG</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#tifftojpg" role="button">How to Batch Convert TIFF to JPG</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#batchedits" role="button">How to Conduct Batch Edits with Macros</a>
@@ -60,18 +61,27 @@
         </div><hr><br>
 
         <div class="container">
-            <h2 id="pdftojpg">How to Batch Convert PDF to JPG</h2>
+            <h2 id="installcleaner">Install Document Cleaner 2.0</h2>
             <ol>
-                <li>Go to File>Scripts>Image Processor.
+                <li><a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-info btn-lg btn-block" target="_blank">Download Document Cleaner 2.0</a></li>
+                <br>
+                <li>Click on downloaded file.
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="pdftojpg">How to Batch Convert Single-Page PDF to JPG</h2>
+            <div class="alert alert-danger" role="alert">
+                If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
+            </div>
+            <ol>
+                <li>Open the files you want to convert in Photoshop. This works best if you're converting a pdf file that contains multiple pages.</li><br>
+                <li>Go to File>Automate>Batch.
                     <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
                 
-                <li>The image processor has four steps:</li>
-                <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_4.jpg' | absolute_url }}"><br>
+                <li>Fill out the form as indicated in the image below:</li>
+                <img class="rounded mx-auto d-block" src="{{ '/objects/batch_saveasjpg.png' | absolute_url }}"><br>
                     <ol>
-                        <li>Select the images to process: select the folder that you want Photoshop to batch file convert.</li>
-                        <li>Select the location to save processed images: select the folder that you want Photoshop to save the converted files.</li>
-                        <li>File type: select save as JPEG as it is selected by default. Then check the box ‘Resize to Fit’. You can then fill out the boxes that allow you to set the <b>pixel (not inches)</b> dimensions that you want your converted files to be. (8.5in x 11in is equal to 2550px x 3300px)</li>
-                        <li>Preferences: deselect everything</li>
+                        <li>Under file naming, use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your files.
                     </ol><br>
                 
                 <li>Select ‘Run’ and let Photoshop do all of the work for you!</li>
@@ -84,18 +94,17 @@
 
         <div class="container">
             <h2 id="batchedits">How to Conduct Batch Edits with Macros</h2>
+            <div class="alert alert-danger" role="alert">
+                If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
+            </div>
             <ol>
-                <li><a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-info btn-lg btn-block" target="_blank">Download Document Cleaner 2.0</a></li>
-                <br>
-                <li>Click on downloaded file.
-                <br><br>
                 <li>Go to Windows>Actions.
                     <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_1.jpg' | absolute_url }}"></li><br>
 
                 <li> Select the new action icon in the little actions window</li>
                 <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros1.jpg' | absolute_url }}"></li><br>
                 
-                <li>Name your action something such as Pdf to Jpg and then press "Record."
+                <li>Name your action something simple that describes your action and then press "Record."
                     <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros2.jpg' | absolute_url }}"></li><br>
                     <ul>
                         <li>Open a file in Photoshop that you wish to convert. Convert the file manually as you normally would. Keep in mind that it has to be done perfectly when recording; no undoing is allowed.</li>
