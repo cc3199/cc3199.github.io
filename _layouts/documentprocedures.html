@@ -69,14 +69,14 @@
         </div><hr><br>
 
         <div class="container">
-            <h2 id="pdftojpg">How to Batch Convert Single-Page PDF to JPG</h2>
+            <h2 id="pdftojpg">How to Batch Convert Files to JPG in Photoshop</h2>
             <div class="alert alert-danger" role="alert">
                 If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
             </div>
             <ol>
-                <li>Open the files you want to convert in Photoshop. This works best if you're converting a pdf file that contains multiple pages. Right-click on the file you want to convert, and open with Photoshop.
+                <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
                     <img class="rounded mx-auto d-block" src="{{ '/objects/open in photoshop.jpg' | absolute_url }}"></li><br>
-                <li>Hold down the <code>Shift</code> key and select the last page. This will select all of the pages.
+                <li><b>*This step for opening PDF files only*</b> Hold down the <code>Shift</code> key and select the last page. This will select all of the pages.
                     <img class="rounded mx-auto d-block" src="{{ '/objects/importpdf.jpg' | absolute_url }}"></li><br>
                 <li>Go to File>Automate>Batch.
                     <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
@@ -84,7 +84,11 @@
                 <li>Fill out the form as indicated in the image below:</li>
                 <img class="rounded mx-auto d-block" src="{{ '/objects/batch_saveasjpg.png' | absolute_url }}"><br>
                     <ol>
-                        <li>Under file naming, use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
+                        <li>Set: Select Document Cleaner 2.0 from dropdown</li>
+                        <li>Action: Select Save as JPEG from dropdown</li>
+                        <li>Source: Select Opened files from dropdown</li>
+                        <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
+                        <li>File naming: use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
                         <li>Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.</li>
                     </ol><br>
                 
