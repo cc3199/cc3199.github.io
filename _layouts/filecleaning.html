@@ -10,19 +10,39 @@
     <main id="maincontent" role="main" class="flex-shrink-0">
     <div class="container">
         <h1 style="text-align:center">Steps to Cleaning Documents in Photoshop</h1>
-        <a class="btn btn-secondary btn-lg btn-block" href="#opentiff">Open Tiff file in Photoshop</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#duplicating">Duplicating Layers</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#rotate">Rotating an Image</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#straighten">Crop and Straighten Document or Image</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#dodgeburn">Dodge and Burn Tools</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#clonestamp">Clone Stamp Tool</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#imagesize">Verify Image Resolution and Page Dimensions</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#legibility">Check Text Legibility</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#cropping">Crop Document if Necessary</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#straighten">Straighten Document</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#tearsandstains">Clean out Tears, Stains, and other Marks</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#marqueetool">Using Marquee Tool to Clean Spots (content-aware, overlap selection, foreground fill...)</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#colorrange">Using Color Range to Make Selection (then to marquee to fill)</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#saveas">Save as JPG and PDF</a>
     </div>
     <hr>
+
     <div class="container">
-      <h2 id="cropping">How to Crop an Image</h2>
+      <h2 id="duplicating">How to Duplicate Layers</h2>
+        <ol>
+          <li>Photoshop works in 'layers', a way to organize different steps and edits. The layers panel is located in the lower-right corner of the window. Duplicating the original layer should ALWAYS be the first thing you do. This ensures that if any mistakes are made, the original layer is preserved.</li>
+
+          <li>When an image is first opened, you will notice that the image is 'locked' in the right side of the layer, indicated with a lock symbol. This is the original copy.<br><br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/lockedlayer.png' | absolute_url }}"></li><br>
+
+          <li>Right-click on the locked image and choose <code>Duplicate Layer</code>. This will make a copy of the original.<br><br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/duplicatelayer.png' | absolute_url }}"></li><br>
+
+          <li>Turn off the 'eye' on the background layer by clicking it so that only the layer saying 'background copy' has an eye icon next to it. This will be the copy you will be working with (seeing).<br><br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/layervisibility.png' | absolute_url }}"></li><br>
+        </ol>
+
+    </div>
+
+    <div class="container">
+      <h2 id="straighten">How to Crop and Straighten an Image</h2>
       <div class="alert alert-warning" role="alert">
         Before making any edits to your document, be sure to <a href="shortcuts.html#duplicatelayer">duplicate</a> the image layer.
       </div>
