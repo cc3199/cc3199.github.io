@@ -9,18 +9,18 @@
     {% include collection-nav.html %}
     <main id="maincontent" role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 style="text-align:center">Steps to Cleaning Documents in Photoshop</h1>
+        <h1 style="text-align:center">Basic Photoshop Tips for Cleaning Documents</h1>
         <a class="btn btn-secondary btn-lg btn-block" href="#duplicating">Duplicating Layers</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#rotate">Rotating an Image</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#straighten">Crop and Straighten Document or Image</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#crop">Crop an Image</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#straighten">Straighten an Image</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#curves">Levels and Curves Adjustments</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#dodgeburn">Dodge and Burn Tools</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#clonestamp">Clone Stamp Tool</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#imagesize">Verify Image Resolution and Page Dimensions</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#legibility">Check Text Legibility</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#tearsandstains">Clean out Tears, Stains, and other Marks</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#marqueetool">Using Marquee Tool to Clean Spots (content-aware, overlap selection, foreground fill...)</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#marquee">Marquee and Content-Aware Fill</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#spothealing">Spot Healing Tool</a>
+        <a class="btn btn-secondary btn-lg btn-block" href="#patchtool">Patch Tool</a>
         <a class="btn btn-secondary btn-lg btn-block" href="#colorrange">Using Color Range to Make Selection (then to marquee to fill)</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#saveas">Save as JPG and PDF</a>
     </div>
     <hr>
 
@@ -38,16 +38,25 @@
           <li>Turn off the 'eye' on the background layer by clicking it so that only the layer saying 'background copy' has an eye icon next to it. This will be the copy you will be working with (seeing).<br><br>
             <img class="rounded mx-auto d-block" src="{{ '/objects/layervisibility.png' | absolute_url }}"></li><br>
         </ol>
-
-    </div>
+    </div><hr>
 
     <div class="container">
-      <h2 id="straighten">How to Crop and Straighten an Image</h2>
+      <h2 id="rotate">How to Rotate Images</h2>
+        <ol>To rotate the image, go to the menu on the top left side of the screen. Navigate to Image>Image Rotation and there is the option to rotate an image 180 or 90 degrees either direction; select the option needed.
+          <ul>
+            <li>There is also an 'Arbitrary' option, which allows you to manually choose the degree to which to rotate if 180 or 90 is not what is needed. Click <a href="#straigten">here</a> to learn how to straighten an image.</li><br>
+            </ul>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/layervisibility.png' | absolute_url }}"></li><br>
+        </ol>
+    </div><hr>
+
+    <div class="container">
+      <h2 id="crop">How to Crop an Image</h2>
       <div class="alert alert-warning" role="alert">
-        Before making any edits to your document, be sure to <a href="shortcuts.html#duplicatelayer">duplicate</a> the image layer.
+        Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
       </div>
         <ol>
-          <li>The crop tool is located in the toolbar on the upper left side of the screen and is used to trim any area off of an image.
+          <li>The crop tool is located in the toolbar on the upper left side of the screen and is used to trim any area off of an image, such as extra white-space.
             <img class="rounded mx-auto d-block" src="{{ '/objects/crop1.jpg' | absolute_url }}">
           </li><br>
           
@@ -64,19 +73,87 @@
     <div class="container">
       <h2 id="straighten">How to Straighten an Image</h2>
       <div class="alert alert-warning" role="alert">
-        Before making any edits to your document, be sure to <a href="shortcuts.html#duplicatelayer">duplicate</a> the image layer.
+        Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
       </div>
 
       <ol>
-        <li>After selecting the crop tool, a small leveler icon will appear on the top toolbar with 'Straighten' next to it.
+        <li>After selecting the crop tool, a small leveler icon will appear on the top toolbar with 'Straighten' next to it.<br><br>
           <img class="rounded mx-auto d-block" src="{{ '/objects/straighten1.jpg' | absolute_url }}">
         </li><br>
 
         <li>
-          Click and drag along a crooked line on the image and it will auto straighten the image using the line drawn.
+          Click and drag along a crooked line on the image and it will auto straighten the image using the line drawn. In this case, this will rotate the image 1.8 degrees clockwise.<br><br>
             <img class="rounded mx-auto d-block" src="{{ '/objects/straighten2.jpg' | absolute_url }}">
-        </li>
+        </li><br>
+
+        <li>Select the check mark in the tool bar to confirm the action.</li>
       </ol><hr>
+    </div>
+
+    <div class="container">
+      <h2 id="curves">How to Adjust the Levels and Curves (Shadows and Highlights Balance)</h2>
+      <div class="alert alert-warning" role="alert">
+        Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+      </div>
+      <iframe src="objects/Levels and Curves Adjustment Tips.pdf" width="100%" height="700px"></iframe><br><hr>
+    </div>
+
+      <div class="container">
+        <h2 id="dodgeburn">The Dodge and Burn Tools</h2>
+        <div class="alert alert-warning" role="alert">
+          Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+        </div>
+        The dodge tool is a brush used to lighten where brushed, the burn tool is a brush used to darken where brushed. The burn tool is commonly used to darken text to make it more legible.<br>
+        <ol>
+          <li>The Dodge and Burn tool is located on the left-side toolbar. Right-click on the icon to reveal more tool options.Be sure to either have the burn or dodge tool selected.<br><br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/dodgeburntool.jpg' | absolute_url }}"></li><br>
+          <li>You can adjust the exposure level by typing in the amount of exposure you want or by using a slider. The slider can by accessed by clicking the arrow on the right side of the exposure input area.
+            <img class="rounded mx-auto d-block" src="{{ '/objects/dodgeburnadjustments.png' | absolute_url }}"></li><br>
+          <li>You can select which range you want (shadows, midtones, or hightlights) to change. You will have to experiment with different ranges to fully understand you they work for whichever effect that you desire.<br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/burnrange.jpg' | absolute_url }}"></li><br>
+        </ol><hr>
+      </div>
+
+      <div class="container">
+        <h2 id="clonestamp">The Clone Stamp Tool</h2>
+        <div class="alert alert-warning" role="alert">
+          Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+        </div>
+        The Clone Stamp tool is a brush that allows you to copy an area and clone that copied area to another location on the canvas. This tool is extremely helpful when trying to replace lines and letters.<br>
+        <div class="alert alert-info" role="alert">
+          See other similar tools (such as the <a href="#marquee">marquee,</a> <a href="#spothealing">spot healing brush,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+        </div>
+        <ol>
+          <li>The Clone Stamp tool is located on the left-side toolbar. Right-click on the icon to reveal more tool options. Be sure to have the Clone Stamp Tool selected.<br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/clonestamp.jpg' | absolute_url }}"><br></li>
+          <li>To Clone Stamp an unwanted area, hover over the area you want to clone to another area. Hold down the <code>ALT</code> key and left-click. This will select the clone area.<br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/clonearea.jpg' | absolute_url }}"></li><br>
+          <li>Next, move over the area to be covered up and hold the left button down while brushing over the desired area.
+            <img class="rounded mx-auto d-block" src="{{ '/objects/clonebrush.jpg' | absolute_url }}"></li><br>
+          Here's another example:
+          <img class="rounded mx-auto d-block" src="{{ '/objects/cloneexample.jpg' | absolute_url }}"></li><br>
+        </ol><hr>
+        </div>
+
+        <div class="container">
+          <h2 id="marquee">The Marquee Tool and Content-Aware Fill</h2>
+          <div class="alert alert-warning" role="alert">
+            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+          </div>
+          The Marquee tool is a selection tool with some handy filling options, such as content-aware. Content-aware filling considers the content outside the selection to the fill with that content.<br>
+          <div class="alert alert-info" role="alert">
+            See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#spothealing">spot healing brush,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+          </div>
+          <ol>
+            <li>Select the Rectangular Marquee Tool, which is located on the left-side toolbar.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/marquee1.jpg' | absolute_url }}"></li><br>
+            <li>Select the area to be corrected by clicking and dragging a square across the area to be repaired.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/marquee2.jpg' | absolute_url }}"></li><br>
+            <li>With your cursor inside the selected area, right-click to access the sub-menu and select 'fill'.</li>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/marquee3.jpg' | absolute_url }}"></li><br>
+            <li>A small window will pop up. In the first drop-down, select 'Content-Aware'.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/cloneexample.jpg' | absolute_url }}"></li><br>
+          </ol>
 
     </main>
     {% include footer.html %}
