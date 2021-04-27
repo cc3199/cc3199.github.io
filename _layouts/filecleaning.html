@@ -153,7 +153,52 @@
               <img class="rounded mx-auto d-block" src="{{ '/objects/marquee3.jpg' | absolute_url }}"></li><br>
             <li>A small window will pop up. In the first drop-down, select 'Content-Aware'.
               <img class="rounded mx-auto d-block" src="{{ '/objects/cloneexample.jpg' | absolute_url }}"></li><br>
+          </ol><hr>
+        </div>
+
+        <div class="container">
+          <h2 id="spothealing">How to Use the Spot Healing Brush Tool</h2>
+          <div class="alert alert-warning" role="alert">
+            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+          </div>
+          The Spot Healing Brush Tool uses content-aware to fill in the spots brushed over with this tool. It is useful for quickly covering small areas with imperfections or cleaning up edges of documents.
+          <div class="alert alert-info" role="alert">
+            See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#marquee">marquee,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+          </div>
+          <ol>
+            <li>Select the Spot Healing Brush Tool, which is located on the left-side toolbar. You can right-click this tool to reveal more similar tool options.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/spotheal1.jpg' | absolute_url }}"></li><br>
+            <li>Brush over the area with the imperfection to 'heal' it.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/spotheal2.jpg' | absolute_url }}"></li><br>
+            <li>Continue brush use for any other imperfections. Notice the difference at the tops of the images below for a before and after.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/spotheal3.jpg' | absolute_url }}"></li><br>
+          </ol><hr>
+        </div>
+
+        <div class="container">
+          <h2 id="patchtool">How to Use the Patch Tool</h2>
+          <div class="alert alert-warning" role="alert">
+            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+          </div>
+          The patch tool is quite similar to the healing spot tool, except that the area to be fixed is selected and then dragged to an area that would 'patch' the selection area. The patch tool tries to retain the tone and color of the location to be patched
+          <div class="alert alert-info" role="alert">
+            See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#marquee">marquee,</a> and the <a href="#spothealing">spot healing brush tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+          </div>
+          <ol>
+            <li>Select the Patch Tool, which is located on the left-side toolbar usually accessed by right-clicking on the Spot Healing Brush Tool and selecting Patch Tool.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/patchtool1.jpg' | absolute_url }}"></li><br>
+            <li>Draw a selection circle around the area you want to fix.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/patchtool2.jpg' | absolute_url }}"></li><br>
+            <li>Left-click in the selected circle and drag to an area that with good texture (Color doesn't necessarily matter too much because the patch tool will attempt to keep as much of the local color as possible while replacing the texture.). Then release the click.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/patchtool3.jpg' | absolute_url }}"></li><br>
+            <li>Hold <code>CTRL-D</code> to deselect the area.</li><br>
+            <li>You may notice that the patch tool doesn't work too well with colors. This is what happens when I try to fix the edge of the page:
+              <img class="rounded mx-auto d-block" src="{{ '/objects/patchtool4.jpg' | absolute_url }}">
+            The edge was blurred rather than filled in. This is a job for either the <a href="#spothealing">spot healing brush tool</a> or the <a href="#clonestamp">clone stamp</a>.</li><br>
           </ol>
+
+
+
 
     </main>
     {% include footer.html %}
