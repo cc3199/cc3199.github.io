@@ -9,28 +9,34 @@
     {% include collection-nav.html %}
     <main id="maincontent" role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 style="text-align:center">Basic Photoshop Tips for Cleaning Documents</h1>
-        <a class="btn btn-secondary btn-lg btn-block" href="#duplicating">Duplicating Layers</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#rotate">Rotating an Image</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#crop">Crop an Image</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#straighten">Straighten an Image</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#curves">Levels and Curves Adjustments</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#dodgeburn">Dodge and Burn Tools</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#clonestamp">Clone Stamp Tool</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#marquee">Marquee and Content-Aware Fill</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#spothealing">Spot Healing Tool</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#patchtool">Patch Tool</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#colorrange">Using Color Range to Make Selection (then to marquee to fill)</a>
+        <h1 style="text-align:center">Photoshop Techniques for Cleaning Files</h1>
+        <p><b>You may use any, all, or none of these techniques for cleaning files based on the condition of the scanned file. The buttons in red are steps that should be completed when cleaning EVERY file. Please see a staff member if you have any questions.</b></p>
+        <a class="btn btn-danger btn-md btn-block" href="#duplicating">Duplicating Layers</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#rotate">Rotating an Image</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#crop">Crop an Image</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#straighten">Straighten an Image</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#curves">Levels and Curves Adjustments</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#dodgeburn">Dodge and Burn Tools</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#clonestamp">Clone Stamp Tool</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#marquee">Marquee and Content-Aware Fill</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#spothealing">Spot Healing Tool</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#patchtool">Patch Tool</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#colorrange">Using Color Range to Make Selection (then to marquee to fill)</a>
+        <a class="btn btn-danger btn-md btn-block" href="#imagesize">Checking Image Size</a>
     </div>
     <hr>
 
     <div class="container">
-      <h2 id="duplicating">How to Duplicate Layers</h2>
+      <h2 id="duplicating">Duplicate Layers</h2>
         <ol>
-          <li>Photoshop works in 'layers', a way to organize different steps and edits. The layers panel is located in the lower-right corner of the window. Duplicating the original layer should ALWAYS be the first thing you do. This ensures that if any mistakes are made, the original layer is preserved.</li>
+          <li>Photoshop works in 'layers', a way to organize different steps and edits. The layers panel is located in the lower-right corner of the window.</li>
 
           <li>When an image is first opened, you will notice that the image is 'locked' in the right side of the layer, indicated with a lock symbol. This is the original copy.<br><br>
             <img class="rounded mx-auto d-block" src="{{ '/objects/lockedlayer.png' | absolute_url }}"></li><br>
+
+            <div class="alert alert-danger" role="alert">
+              You should ALWAYS duplicate the original layer. Use the original layer as a reference during the optimization process or to start over with the page.
+            </div>
 
           <li>Right-click on the locked image and choose <code>Duplicate Layer</code>. This will make a copy of the original.<br><br>
             <img class="rounded mx-auto d-block" src="{{ '/objects/duplicatelayer.png' | absolute_url }}"></li><br>
@@ -41,7 +47,8 @@
     </div><hr>
 
     <div class="container">
-      <h2 id="rotate">How to Rotate Images</h2>
+      <h2 id="rotate">Rotate Images</h2>
+      Rotating an image in this step will rotate visible layers
         <ol>To rotate the image, go to the menu on the top left side of the screen. Navigate to Image>Image Rotation and there is the option to rotate an image 180 or 90 degrees either direction; select the option needed.
           <ul>
             <li>There is also an 'Arbitrary' option, which allows you to manually choose the degree to which to rotate if 180 or 90 is not what is needed. Click <a href="#straigten">here</a> to learn how to straighten an image.</li><br>
@@ -51,7 +58,7 @@
     </div><hr>
 
     <div class="container">
-      <h2 id="crop">How to Crop an Image</h2>
+      <h2 id="crop">Crop an Image</h2>
       <div class="alert alert-warning" role="alert">
         Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
       </div>
@@ -71,19 +78,24 @@
     </div>
 
     <div class="container">
-      <h2 id="straighten">How to Straighten an Image</h2>
+      <h2 id="straighten">Straighten an Image</h2>
       <div class="alert alert-warning" role="alert">
         Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
       </div>
 
       <ol>
-        <li>After selecting the crop tool, a small leveler icon will appear on the top toolbar with 'Straighten' next to it.<br><br>
+        <li>Select the 'Ruler' tool on the left-side toolbar. It can be found by right-clicking on the 'Eye-Dropper Tool'.<br><br>
           <img class="rounded mx-auto d-block" src="{{ '/objects/straighten1.jpg' | absolute_url }}">
         </li><br>
 
         <li>
-          Click and drag along a crooked line on the image and it will auto straighten the image using the line drawn. In this case, this will rotate the image 1.8 degrees clockwise.<br><br>
+          Click and drag along a crooked line on the image and then select 'Straighten Layer' at the top toolbar. If your layer doesn't have any lines, but has text instead, drag a line underneath a line of text as an imaginary line.<br><br>
             <img class="rounded mx-auto d-block" src="{{ '/objects/straighten2.jpg' | absolute_url }}">
+        </li><br>
+
+        <li>
+          This will often change the canvas size as you will see the checkered background around the edges. <a href="#marquee"><b>Check your canvas size</b></a>, especially for standard dimension documents such as 11x17, 8.5x11, and so on.<br><br>
+            <img class="rounded mx-auto d-block" src="{{ '/objects/straighten3.jpg' | absolute_url }}">
         </li><br>
 
         <li>Select the check mark in the tool bar to confirm the action.</li>
@@ -91,7 +103,7 @@
     </div>
 
     <div class="container">
-      <h2 id="curves">How to Adjust the Levels and Curves (Shadows and Highlights Balance)</h2>
+      <h2 id="curves">Adjust the Levels and Curves (Shadows and Highlights Balance)</h2>
       <div class="alert alert-warning" role="alert">
         Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
       </div>
@@ -99,7 +111,7 @@
     </div>
 
       <div class="container">
-        <h2 id="dodgeburn">The Dodge and Burn Tools</h2>
+        <h2 id="dodgeburn">Dodge and Burn Tools</h2>
         <div class="alert alert-warning" role="alert">
           Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
         </div>
@@ -115,7 +127,7 @@
       </div>
 
       <div class="container">
-        <h2 id="clonestamp">The Clone Stamp Tool</h2>
+        <h2 id="clonestamp">Clone Stamp Tool</h2>
         <div class="alert alert-warning" role="alert">
           Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
         </div>
@@ -136,7 +148,7 @@
         </div>
 
         <div class="container">
-          <h2 id="marquee">The Marquee Tool and Content-Aware Fill</h2>
+          <h2 id="marquee">Marquee Tool and Content-Aware Fill</h2>
           <div class="alert alert-warning" role="alert">
             Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
           </div>
@@ -157,7 +169,7 @@
         </div>
 
         <div class="container">
-          <h2 id="spothealing">How to Use the Spot Healing Brush Tool</h2>
+          <h2 id="spothealing">Spot Healing Brush Tool</h2>
           <div class="alert alert-warning" role="alert">
             Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
           </div>
@@ -176,7 +188,7 @@
         </div>
 
         <div class="container">
-          <h2 id="patchtool">How to Use the Patch Tool</h2>
+          <h2 id="patchtool">Patch Tool</h2>
           <div class="alert alert-warning" role="alert">
             Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
           </div>
@@ -195,7 +207,33 @@
             <li>You may notice that the patch tool doesn't work too well with colors. This is what happens when I try to fix the edge of the page:
               <img class="rounded mx-auto d-block" src="{{ '/objects/patchtool4.jpg' | absolute_url }}">
             The edge was blurred rather than filled in. This is a job for either the <a href="#spothealing">spot healing brush tool</a> or the <a href="#clonestamp">clone stamp</a>.</li><br>
+          </ol><hr><br>
+        </div>
+
+        <div class="container">
+          <h2 id="colorrange">Color Range Selection and Fill</h2>
+          <div class="alert alert-warning" role="alert">
+            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+          </div>
+          <ol>
+            <li></li>
+          </ol><hr><br>
+          </div>
+
+        <div class="container">
+          <h2 id="imagesize">Checking Image Size</h2>
+          <ol>
+            <li>As a quick check of you image size, look to the very lower-left of the Photoshop window. This small box displays the image size and the ppi (pixels per inch). Check that these numbers match the original document size you started with before applying any edits. Standard document sizes are 8.5x11 (letter), 8.5x14 (legal), and 11x17 (ledger). Many maps most likely will not adhere to these standards, so check what the original scanned dimensions were. In this case, the file's image size has changed over the course of editing. <br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/checkcanvas1.jpg' | absolute_url }}"></li><br>
+            <li>To fix this, navigate to 'Image' on the top navigation bar, then to 'Image Size'.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/checkcanvas2.jpg' | absolute_url }}"></li><br>
+            <li>In the next window, change to the appropriate dimensions and double-check that your resolution reads 300. Correcting the dimensions will be easier if the height and width are not locked. Click the chain-link icon to unlink the height and width.
+              <img class="rounded mx-auto d-block" src="{{ '/objects/checkcanvas3.jpg' | absolute_url }}"></li><br>
           </ol>
+          <div class="alert alert-danger" role="alert">
+            You should ALWAYS check the image size before saving and closing your file. This should also be the very last thing that you do before saving and closing the file.
+          </div>
+        </div>
 
 
 
