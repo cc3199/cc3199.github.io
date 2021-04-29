@@ -18,10 +18,9 @@
         <a class="btn btn-secondary btn-md btn-block" href="#curves">Levels and Curves Adjustments</a>
         <a class="btn btn-secondary btn-md btn-block" href="#dodgeburn">Dodge and Burn Tools</a>
         <a class="btn btn-secondary btn-md btn-block" href="#clonestamp">Clone Stamp Tool</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#marquee">Marquee and Content-Aware Fill</a>
+        <a class="btn btn-secondary btn-md btn-block" href="#selection">Selection Tools and Fill</a>
         <a class="btn btn-secondary btn-md btn-block" href="#spothealing">Spot Healing Tool</a>
         <a class="btn btn-secondary btn-md btn-block" href="#patchtool">Patch Tool</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#colorrange">Using Color Range to Make Selection (then to marquee to fill)</a>
         <a class="btn btn-danger btn-md btn-block" href="#imagesize">Check Canvas Size</a>
     </div>
     <hr>
@@ -133,7 +132,7 @@
         </div>
         The Clone Stamp tool is a brush that allows you to copy an area and clone that copied area to another location on the canvas. This tool is extremely helpful when trying to replace lines and letters.<br>
         <div class="alert alert-info" role="alert">
-          See other similar tools (such as the <a href="#marquee">marquee,</a> <a href="#spothealing">spot healing brush,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+          See other similar tools (such as the <a href="#selection">selection,</a> <a href="#spothealing">spot healing brush,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
         </div>
         <ol>
           <li>The Clone Stamp tool is located on the left-side toolbar. Right-click on the icon to reveal more tool options. Be sure to have the Clone Stamp Tool selected.<br>
@@ -148,11 +147,12 @@
         </div>
 
         <div class="container">
-          <h2 id="marquee">Marquee Tool and Content-Aware Fill</h2>
+          <h2 id="selection">Selection Tool and Fill</h2>
           <div class="alert alert-warning" role="alert">
             Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
           </div>
-          The Marquee tool is a selection tool with some handy filling options, such as content-aware. Content-aware filling considers the content outside the selection to the fill with that content.<br>
+          <h3>Marquee Tool</h3>
+          The Marquee tool is a selection tool with some handy filling options, such as content-aware, foreground, and background. Content-aware filling considers the content outside the selection to the fill with that content. Foreground filling uses the top color in the color squares in the left-side toolbar. The background fill uses the bottom color in the color squares in the left-side toolbar.<br>
           <div class="alert alert-info" role="alert">
             See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#spothealing">spot healing brush,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
           </div>
@@ -164,18 +164,34 @@
             <li>With your cursor inside the selected area, right-click to access the sub-menu and select 'fill'.</li>
               <img class="rounded mx-auto d-block" src="{{ '/objects/marquee3.jpg' | absolute_url }}"></li><br>
             <li>A small window will pop up. In the first drop-down, select 'Content-Aware'.
-              <img class="rounded mx-auto d-block" src="{{ '/objects/cloneexample.jpg' | absolute_url }}"></li><br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/marquee4.jpg' | absolute_url }}"></li><br>
           </ol><hr>
+
+          <h3>Color Range Selection</h3>
+          Color Range selection uses the "eyedropper" to select same colored pixels throughout the document.
+          <ol>
+            <li>First, you will need to select the color of the document and save it as the foreground color. To do this, select the foreground color in the squares in the left-side toolbar. When the window pops up, use your cursor (which will now take the shape of an eyedropper) to select anywhere on the background of the document. This will be the color used to fill in parts of the document that are not wanted to be replaced with the document color to blend in.<br><br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/colorrange.jpg' | absolute_url }}"></li><br>
+            <li>Locate Color Range by navigating to 'Select>Color Range'.<br><br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/colorrange1.jpg' | absolute_url }}"></li><br>
+            <li>When the window pops up, use your cursor (which will now take the shape of an eyedropper) to select the section you want to select. <b>Do not press 'OK' yet.</b><br><br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/colorrange2.jpg' | absolute_url }}"></li><br>
+            <li>In the window, select the eyedropper with the little plus symbol next to it. Then click and drag over a majority of the area you want to select. This is just to ensure that all of the colored pixels in this range are selected. You may unclick and click and hold again in a different area, or even click multiple times to ensure every color you want replaced is selected.Then select 'OK'.<br><br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/colorrange3.jpg' | absolute_url }}"></li><br>
+            <li>You should see lines around the area of the colors you selected. Now select the 'Marquee' tool then right-click with your cursor in the selected area and select 'Fill'.<br><br>
+              <img class="rounded mx-auto d-block" src="{{ '/objects/colorrange4.jpg' | absolute_url }}"></li><br>
+            <li>Once the selection is filled, you may or may not see some spots that were missed. You can repeat the process over agin until you get the result you are looking for.</li><hr>
+          </ol>
         </div>
 
         <div class="container">
           <h2 id="spothealing">Spot Healing Brush Tool</h2>
           <div class="alert alert-warning" role="alert">
-            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+            <p class="font-italic">Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.</p>
           </div>
           The Spot Healing Brush Tool uses content-aware to fill in the spots brushed over with this tool. It is useful for quickly covering small areas with imperfections or cleaning up edges of documents.
           <div class="alert alert-info" role="alert">
-            See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#marquee">marquee,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+            <p class="font-italic">See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#marquee">marquee,</a> and the <a href="#patchtool">patch tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.</p>
           </div>
           <ol>
             <li>Select the Spot Healing Brush Tool, which is located on the left-side toolbar. You can right-click this tool to reveal more similar tool options.
@@ -190,11 +206,11 @@
         <div class="container">
           <h2 id="patchtool">Patch Tool</h2>
           <div class="alert alert-warning" role="alert">
-            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
+            <p class="font-italic">Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.</p>
           </div>
           The patch tool is quite similar to the healing spot tool, except that the area to be fixed is selected and then dragged to an area that would 'patch' the selection area. The patch tool tries to retain the tone and color of the location to be patched
           <div class="alert alert-info" role="alert">
-            See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#marquee">marquee,</a> and the <a href="#spothealing">spot healing brush tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.
+            <p class="font-italic">See other similar tools (such as the <a href="#clonestamp"> clone stamp,</a> <a href="#marquee">marquee,</a> and the <a href="#spothealing">spot healing brush tool</a>) to pick the most efficient for the situation. Sometimes a combination of these tools is necessary to get the desired outcome.</p>
           </div>
           <ol>
             <li>Select the Patch Tool, which is located on the left-side toolbar usually accessed by right-clicking on the Spot Healing Brush Tool and selecting Patch Tool.
@@ -211,16 +227,6 @@
         </div>
 
         <div class="container">
-          <h2 id="colorrange">Color Range Selection and Fill</h2>
-          <div class="alert alert-warning" role="alert">
-            Before making any edits to your document, be sure to <a href="#duplicating">duplicate</a> the image layer.
-          </div>
-          <ol>
-            <li></li>
-          </ol><hr><br>
-          </div>
-
-        <div class="container">
           <h2 id="imagesize">Check Image Size</h2>
           <ol>
             <li>As a quick check of your canvas size, look to the very lower-left of the Photoshop window. This small box displays the image/canvas size and the ppi (pixels per inch). Check that these numbers match the original document size you started with before applying any edits. Standard document sizes are 8.5x11 (letter), 8.5x14 (legal), and 11x17 (ledger). Many maps most likely will not adhere to these standards, so check what the original scanned dimensions were. In this case, the file's canvas size has changed over the course of editing. <br>
@@ -231,7 +237,7 @@
               <img class="rounded mx-auto d-block" src="{{ '/objects/checkcanvas3.jpg' | absolute_url }}"></li><br>
           </ol>
           <div class="alert alert-danger" role="alert">
-            You should ALWAYS check the canvas size before saving and closing your file. This should also be the very last thing that you do before saving and closing the file.
+            <p class="font-italic">You should ALWAYS check the canvas size before saving and closing your file. This should also be the very last thing that you do before saving and closing the file.</p>
           </div>
         </div>
 
