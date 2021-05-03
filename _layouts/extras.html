@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    
+    <div class="container">
+        <h1>Photoshop Tips and Tricks</h1>
+
+        {{content}}
+
+    </div>
+
+    <main id="maincontent" role="main" class="flex-shrink-0">
+        <div class="container">
+        <div class="card mb-9">
+            <h2 style="text-align:center">Follow links below for Extra Photoshop Pointers</h2>
+                <a class="btn btn-secondary btn-lg btn-block" href="#dust" role="button">Dust and Scratches Filter</a>    
+                <a class="btn btn-secondary btn-lg btn-block" href="#patternstamp" role="button">Pattern Stamp</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#brushes" role="button">More Brush Tools</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#bendtext" role="button">Bend Text</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#puppetwarp" role="button">Puppet Warp</a>
+        </div><hr><br>
+
+
+    {% include footer.html %}
+    {% include foot.html %}
+    {% include scroll-to-top.html %}
+  </body>
+</html>
