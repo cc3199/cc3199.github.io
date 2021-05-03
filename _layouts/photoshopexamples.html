@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    
+    <div class="container">
+        <h1>Photoshop Tips and Tricks</h1>
+
+        {{content}}
+
+    </div>
+
+    <main id="maincontent" role="main" class="flex-shrink-0">
+        <div class="container">
+        <div class="card mb-9">
+            <h2 style="text-align:center">Follow links below for Tool Use Examples</h2>
+                <a class="btn btn-secondary btn-lg btn-block" href="#lasso" role="button">Lasso Tool</a>    
+                <a class="btn btn-secondary btn-lg btn-block" href="#selection" role="button">Various Selection Tools</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#healingbrush" role="button">Healing Brush</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#spotheal" role="button">Spot Healing and Patch Tool</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#dodgeburn" role="button">Dodge, Burn, and Clone Stamp</a>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="lasso">Lasso Tool</h2>
+        <iframe src="objects/Lasso Tool.pdf" width="100%" height="800px"></iframe>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="selection">Various Selection Tools</h2>
+        <iframe src="objects/Various Selection Tools.pdf" width="100%" height="800px"></iframe>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="healingbrush">Healing Brush</h2>
+        <iframe src="objects/Healing Brush.pdf" width="100%" height="800px"></iframe>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="spotheal">Spot Healing and Patch Tool</h2>
+        <iframe src="objects/Spot Healing and Patch Tool.pdf" width="100%" height="800px"></iframe>
+        </div><hr><br>
+
+        <div class="container">
+            <h2 id="dodgeburn">Dodge, Burn, and Clone Stamp</h2>
+        <iframe src="objects/Dodge, Burn, and Clone Stamp.pdf" width="100%" height="800px"></iframe>
+        </div><hr><br>
+
+    </div>
+    
+    
+    {% include footer.html %}
+    {% include foot.html %}
+    {% include scroll-to-top.html %}
+  </body>
+</html>
