@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <main id="maincontent" role="main" class="flex-shrink-0">
+        <div class="container">
+        <h2>Deploying Collection Site</h2>
+        <div class="alert alert-danger" role="alert">
+            Please double-check your <a href="/mbmgmodifications.html#config" target="_blank"><b>config.yml page</b></a> and your<a href="/mbmgmodifications.html#theme" target="_blank"><b> theme.yml page</b></a> before performing this step. It would also be wise to type <code>bundle exec jekyll s</code> into your terminal, click the server link, and double-check your full website.
+</div>
+        <p>Once your collection is completely finished and ready to be published to the live webstie, type <code> rake deploy </code>into your terminal. This will run the Jekyll build command which may take quite a bit longer than Jekyll serve. Once finished, your complete site will be output in the '_site' directory.</p>
+        <p><b>For now, please let Chelsea Pincock know that your collection is finished, and she will take care of the rest.</b></p>
+    
+</main>
+{% include footer.html %}
+{% include foot.html %}
+{% include scroll-to-top.html %}
+</body>
+</html>

@@ -17,6 +17,7 @@
         <div class="card mb-9">
             <h2 style="text-align:center">When creating a new collection, please follow each of the steps in gray. For adding items to a collection, please follow the steps in green below.</h2>
                 <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Getting Set Up</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="#serving" role="button">Serving your Website</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#metadata" role="button">Creating Metadata</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#open" role="button">Opening Collection in Text Editor</a>
                 <a class="btn btn-secondary btn-lg btn-block" href="#config" role="button">Config.yml File</a>
@@ -53,6 +54,43 @@
     </ol>
     <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through opening the files in your text editor to then be able to customize your collection.</div>
     <hr>
+</div>
+
+<div class="container">
+  <h2 id="serving">How to Serve Your Website</h2>
+  <p>With your project repository copied to your local machine, you can use Jekyll to generate and serve your site on a local development server. The complete website will be available to use in your browser as if it is on the live web–but it is only on your local computer.<br>
+
+    This is great for iterative development, allowing you to test changes and see what happens!<br>
+    
+    With a fresh copy of a CollectionBuilder template, you should be able to test out your Jekyll set up without making any changes to the code, generating the demo collection using the commands below.<br>
+    
+    Once you start adding your own content, configuring, and customizing, you will follow exactly the same method to start the dev server to view your project.</p>
+
+  <h3>Open Terminal</h3>
+  <p>To give commands to Jekyll, you will need to have a terminal open in the root of your project folder. Editors like VS Code can open a full folder and provide an integrated terminal to make working on a Jekyll project easier.<br>
+
+    If you are using VS Code, open your project repository folder with the editor. Use the keyboard shortcut <code>Ctrl + `</code> (control + backtick “ ` “, the key left of “1” shared with “~”) to open and close the integrated terminal, or click the “View” menu and select “Terminal”. On Windows, please ensure you are using Git Bash (not PowerShell or CMD).</p>
+
+  <h3>Bundle Install (1st Time Only)</h3>
+    <p>The first time you use this project folder on this computer, type the command: <code>bundle install</code>.<br>
+      Bundler will check the project’s “Gemfile”, install any missing dependencies, and create a “Gemfile.lock” listing the exact Gems set up for this project. You will see a bunch of output in your terminal window and if this is the first time bundling it may take awhile to finish. Once complete your terminal prompt will return.<br>
+
+      Although it seems complicated at first, using Bundler helps avoid dependency issues on your system. The “Gemfile.lock” keeps the dependencies consistent to help reproduce the specific environment you are developing in.</p>
+
+  <h3>Jekyll Serve</h3>
+  <p>The “jekyll serve” command will start the dev server and generate your site, rebuilding each time you save a file in the project folder. Using the prefix <code>bundle exec </code>ensures that you are using the exact setup recorded in the project’s “Gemfile.lock” (hopefully avoiding dependency issues unexpectedly breaking things).<br>
+    With a terminal (integrated or not) open in your project folder follow these steps:<br>
+    <ol>
+    <li>Type the command <code>bundle exec jekyll s</code> and press enter.</li>
+    <li>In the terminal you’ll see some text appear (messages from Jekyll), including a URL that appears after the title “Server address:”</li>
+    <li>Hold down Ctrl / Command and click the link to open the site in your browser, or copy the URL and paste it into a browser (we recommend doing this in a private window).</li>
+    <li>When you’re ready to end your Jekyll session, click into the terminal, then type Ctrl + C. This stops the server from running. (This is how to close most command line programs, not just Jekyll!)</li>
+    </ol>
+    Tip: always check your terminal for messages. The error messages can be intimidating and confusing–but do often contain useful information!<br>
+    
+    The “CollectionBuilder Page Generator” plugin creates item pages from your metadata while Jekyll is running. It provides information in the terminal that might help debugging your metadata.<br>
+    
+    When you are ready to build the final version of your site to deploy, the command is a bit different–see <a href="/deploy.html"><b>Jekyll Build</b></a>.</p><hr>
 </div>
 
 <div class="container">
