@@ -18,63 +18,15 @@
             <h1 style="text-align:center">Steps to setting up and installing software necessary for building collections in CollectionBuilder. You will have to follow each step carefully.</h1>
             <br>
         <div class="container">
-            <h2 id="texteditor">Installing a Text Editor</h2>
-            <div> You may use whichever text editor you would like or feel the most comfortable with. CollectionBuilder tutorials use Visual Studio Code, but you may use Atom, Visual Studio, Dreamweaver, or any other of the sort. Here's how CollectionBuilder recommends to install these software. Use the rest of the steps in the window below to install Git, Ruby, and Jekyll.
+            <h2 id="texteditor">Installing the Software</h2>
+            <div> Please follow all of the instructions in the window below for installing software. Be sure to go through all of the tabs in the side navigation bar to install everything necessary. This includes the software installation under the 'Optional Software' tab.
             </div>
             <div class="alert alert-danger" role="alert">
                 When following the CollectBuilder documentation, follow instructions for Stand-Alone (or SA) users. Ignore instructions for GH or Skin users.
             </div>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://collectionbuilder.github.io/docs/software.html" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://collectionbuilder.github.io/cb-docs/docs/software/" allowfullscreen></iframe>
               </div>
-        </div>
-        <br>
-        <div class="container">
-            <h2 id="imagemagick">Installing ImageMagick</h2>
-            <div><h3>ImageMagick 7</h3>
-                <p>ImageMagick is used by generate-derivatives to create small and thumbnail images from .jpg and .pdf (with Ghostscript) collection object files.
-                <br>
-                Note that if you already have ImageMagick 6 installed and want to use that, see the note about doing so in the Generate Derivatives section.
-                <br>
-                Download the appropriate executable for your operating system <a href="https://imagemagick.org/script/download.php">here.</a>
-                <br>
-                The scripts expect this to be executable via the command magick.
-                <br>
-                The Windows version of ImageMagick is self-installing. Scroll down the screen to find the downloadable installer.
-                <br>
-                ImageMagick recommends the use of Homebrew for Mac users. After Homebrew is installed, simply type brew install imagemagick into the terminal.
-                <br>
-                Here's an example of installation under Ubuntu:
-                <br>
-                <code>curl https://imagemagick.org/download/binaries/magick -O
-                <br>
-                chmod +x magick
-                <br>
-                sudo mv magick /usr/local/bin/
-                </code></p>
-            </div>
-            <div class="container">
-                <h2 id="ghostscript">Installing Ghostscript</h2>
-                <div><h3>Ghostscript 9.52</h3>
-                <p>Ghostscript is used behind the scenes by ImageMagick in generate-derivatives to create small and thumbnail images from .pdf collection object files.
-                <br>
-                Download the appropriate executable for your operating system <a href="https://www.ghostscript.com/download/gsdnld.html">here.</a>
-                <br>   
-                The scripts expect this to be executable via the command gs.
-                <br>   
-                Windows users will use an installation wizard downloaded from the above site. Just check the default settings.
-                <br>    
-                Mac users can use Homebrew and type brew install ghostscript into the command line.
-                <br>    
-                Here's an example of installation under Ubuntu:
-                <br>
-                <code>curl -L https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs952/ghostscript-9.52-linux-x86_64.tgz -O
-                <br>
-                tar xf ghostscript-9.52-linux-x86_64.tgz
-                <br>
-                sudo mv ghostscript-9.52-linux-x86_64/gs-952-linux-x86_64 /usr/local/bin/gs
-                <br>
-                rm -rf ghostscript-9.52-linux-x86_64*</code></p><br>
         </div>
 
     </main>
