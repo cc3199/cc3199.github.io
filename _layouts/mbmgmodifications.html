@@ -37,13 +37,13 @@
   <ol>
     <li>Clone the Master branch, if you haven't already. If you have already done this when making a different collection, you do not have to do this again. Go to <a href="https://github.com/cc3199/mbmg-master" target="_blank"><b>the MBMG Github Master code.</b></a> Then you will go to the "code" dropdown and select "Open in Github Desktop". Ensure you have Github Desktop installed before completing this step.
       <img class="rounded mx-auto d-block" src="{{ '/objects/clone master.jpg' | absolute_url }}"><br>
-      This will then bring up Github Desktop and a prompt will ask where you want the files to be saved. Ususally the default location is fine, but, if the default location does not suit your organization style, you may select a different location and then select "ok."<br>
+      This will then bring up Github Desktop and a prompt will ask where you want the files to be saved. Usually the default location is fine, but, if the default location does not suit your organization style, you may select a different location and then select "ok."<br>
       <div class="alert alert-info" role="alert">
       By the way, the master code is a template of sorts for all other collections. Do not edit the master code unless something needs to be changed across ALL collections. You will be creating "branches" that come from the master code and edits unique to that branch will remain in that branch. It will not affect other collections in other branches. For more information about how GitHub branches work, see their <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches" target="_blank"><b>documentation.</b></a>
       </div>
     </li><br>
                 
-    <li>Once you have cloned the master, it will auto-open in Github Desktop. Then, you'll create a branch based off the master code. To do this, make sure you are in the mbmg-master repository, then move slightly to the right to select a dropdown menu under "current branch". In this dropdown menu, you will see all of the existing branches, or collections, created from the mbmg-master. To create a new one, type the name of your collection in the typing box at the top and then select "New Branch."
+    <li>Once you have cloned the master, it will auto-open in Github Desktop. Then, you'll create a branch based off the master code. To do this, make sure you are in the mbmg-master repository, then move slightly to the right to select a dropdown menu under "current branch". In this dropdown menu, you will see all of the existing branches, or collections, created from the mbmg-master. To create a new one, select "New Branch" then type the name of your collection in the typing box, then select "Create Branch".
     <br>
       <img class="rounded mx-auto d-block" src="{{ '/objects/new branch.jpg' | absolute_url }}">
     </li><br>
@@ -58,22 +58,22 @@
 
 <div class="container">
   <h2 id="serving">How to Serve Your Website</h2>
-  <p>With your project repository copied to your local machine, you can use Jekyll to generate and serve your site on a local development server. The complete website will be available to use in your browser as if it is on the live web–but it is only on your local computer.<br>
+  <p>With your project repository copied to your local machine, you can use Jekyll to generate and serve your site on a local development server. The complete website will be available to use in your browser as if it is on the live web–but it is only on your local computer.<br><br>
 
-    This is great for iterative development, allowing you to test changes and see what happens!<br>
+    This is great for iterative development, allowing you to test changes and see what happens!<br><br>
     
-    With a fresh copy of a CollectionBuilder template, you should be able to test out your Jekyll set up without making any changes to the code, generating the demo collection using the commands below.<br>
+    With a fresh copy of a CollectionBuilder template, you should be able to test out your Jekyll set up without making any changes to the code, generating the demo collection using the commands below.<br><br>
     
     Once you start adding your own content, configuring, and customizing, you will follow exactly the same method to start the dev server to view your project.</p>
 
   <h3>Open Terminal</h3>
-  <p>To give commands to Jekyll, you will need to have a terminal open in the root of your project folder. Editors like VS Code can open a full folder and provide an integrated terminal to make working on a Jekyll project easier.<br>
+  <p>To give commands to Jekyll, you will need to have a terminal open in the root of your project folder. Editors like VS Code can open a full folder and provide an integrated terminal to make working on a Jekyll project easier.<br><br>
 
     If you are using VS Code, open your project repository folder with the editor. Use the keyboard shortcut <code>Ctrl + `</code> (control + backtick “ ` “, the key left of “1” shared with “~”) to open and close the integrated terminal, or click the “View” menu and select “Terminal”. On Windows, please ensure you are using Git Bash (not PowerShell or CMD).</p>
 
   <h3>Bundle Install (1st Time Only)</h3>
-    <p>The first time you use this project folder on this computer, type the command: <code>bundle install</code>.<br>
-      Bundler will check the project’s “Gemfile”, install any missing dependencies, and create a “Gemfile.lock” listing the exact Gems set up for this project. You will see a bunch of output in your terminal window and if this is the first time bundling it may take awhile to finish. Once complete your terminal prompt will return.<br>
+    <p>The first time you use this project folder on this computer, type the command: <code>bundle install</code>.<br><br>
+      Bundler will check the project’s “Gemfile”, install any missing dependencies, and create a “Gemfile.lock” listing the exact Gems set up for this project. You will see a bunch of output in your terminal window and if this is the first time bundling it may take awhile to finish. Once complete your terminal prompt will return.<br><br>
 
       Although it seems complicated at first, using Bundler helps avoid dependency issues on your system. The “Gemfile.lock” keeps the dependencies consistent to help reproduce the specific environment you are developing in.</p>
 
@@ -95,8 +95,8 @@
 
 <div class="container">
   <h2 id="metadata">Creating Metadata</h2>
-  <p>The metadata is the most important file for CollectionBuilder. The site will not load images or documents from your collection without it. Also, if you find any errors in the website such as a misspelling or an image not loading, it is most likely going to be due to an error in the metadata.</p>
-  <p>The metadata file is basically a spreadsheet that describes all of the info about each object within the collection.If an object is properly described within this metadata file, it will appear in the website, and will it be searchable. Carefully follow the steps <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/" target="_blank"><b>here</b></a> to create metadata for your collection, and remember to follow any special instructions for SA users!</p>
+  <p>The metadata is the most important file for CollectionBuilder. The site will not load images or documents from your collection without it. Also, if you find any errors in the website such as a misspelling or an image not loading, it is most likely going to be due to an error in the metadata, not the code itself.</p>
+  <p>The metadata file is basically a spreadsheet that describes all of the info about each object within the collection. If an object is properly described within this metadata file, it will appear in the website, and will it be searchable. Carefully follow the steps <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/" target="_blank"><b>here</b></a> to create metadata for your collection, and remember to follow any special instructions for SA users!</p>
   <div class="alert alert-info" role="alert">
   If you don't need to create a new metadata file and add metadata content to an existing file instead, please see the instructions on this page about <a href="{{ '/mbmgmodifications.html#addmetadata' | absolute_url }}"><b>adding to existing metadata.</b></a>
 </div><hr>
@@ -122,7 +122,7 @@
           <li>The first section titled "URL Variables" will <b>NOT</b> need to be changed. The following section titled "Site Settings" is where the primary changes will be made in this file. Make sure to delete the existing template text in red, and replace it with your own. 
             <ul>
               <li><b>Title:</b> The title of your collection. This will appear as the title on the home page and on each page's header. </li>
-              <li><b>Tagline:</b> A subtitle of sorts. This will appear underneath the title on the homepage and each page's header.</li>
+              <li><b>Tagline:</b> A subtitle of sorts. This will appear underneath the title on the homepage and each page's header. This is optional.</li>
               <li><b>Description:</b> A couple of sentences or a paragraph briefly describing the collection. This appears on the home page under the featured banner image.</li>
               <li><b>Author:</b> You may add your name to the MBMG or simply leave as MBMG.
               <li><b>Keywords:</b> Enter a few keywords that match your collection separated by a semicolon, such as montana;geology;photographs; etc.</li>
