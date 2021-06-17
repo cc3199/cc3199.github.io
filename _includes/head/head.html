@@ -30,8 +30,7 @@ body {
 }
 
 .sidenav {
-  height: 100%;
-  width: 200px;
+  width: 180px;
   position: fixed;
   z-index: 1;
   top: 2;
@@ -42,7 +41,7 @@ body {
 }
 
 .sidenav a {
-  padding: 6px 6px 6px 32px;
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -50,11 +49,13 @@ body {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #064579;
 }
 
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
 }
 
 @media screen and (max-height: 450px) {

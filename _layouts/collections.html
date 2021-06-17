@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+
+</style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <main id="maincontent" role="main" class="flex-shrink-0">
+        <div class="sidenav">
+            <h2 class="text-white">Procedures</h2>
+            <a href="/appraisal.html">Appraisal</a>
+            <a href="/collections.html">Collections</a>
+            <a href="/labels.html">Labels</a>
+            <a href="/students.html">Students</a>
+            <a href="/metadata.html">Metadata</a>
+            <a href="/scanning.html">Scanning</a>
+          </div><br>
+
+          <div class="container">
+            <h2>Collections</h2>
+            <p>The MBMG’s Archives and Data Preservation program maintains both physical and digital information repositories. The original repository contained property files, maps, and selected publications. Previous MBMG staff organized property files and maps by Montana county, historical mining district, and property name. Publication order was by organization or author. Staff did not know or adhere to the archival principles to keep all documents together from one creator (fonds) and provenance maintained all records according to their origin and not intermingle them with those of another provenance.<br><br>
+            More recently, MBMG staff inventory, describe, and record donated collections in Microsoft Access relational databases by the creator (or collection donor). Staff create an Access relationship between each collection record to associated records in other database tables. For example, a map contained in a collection may have several claims noted on it. Staff creates a database relationship between the map’s unique identification number and that of each claim annotated on the map to its associate record in the Claims database.<br><br>
+            The value of collection contents changes over time. The emergence of new technologies supplants the need for physical copies of certain data. Periodic collection reviews determine the ongoing value and public use of the collection.
+            </p><hr><br>
+        </div>
+
+    </main>
+    {% include footer.html %}
+    {% include foot.html %}
+    {% include scroll-to-top.html %}
+    </body>
+    </html>
