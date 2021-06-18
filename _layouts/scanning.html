@@ -17,12 +17,19 @@
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <h2 class="text-white">Procedures</h2>
-      <a href="/appraisal.html">Appraisal</a>
       <a href="/collections.html">Collections</a>
+      <a href="/assessment.html">Assessment</a>
+      <button class="dropdown-btn">Preservation 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/scanning.html">Scanning</a>
+          <a href="/metadata.html">Metadata</a>
+        </div>
       <a href="/labels.html">Labels</a>
       <a href="/students.html">Students</a>
-      <a href="/metadata.html">Metadata</a>
-      <a href="/scanning.html">Scanning</a>
+      <a href="/forms.html">Forms</a>
+        
     </div>
     
     <!-- Use any element to open the sidenav -->
@@ -52,6 +59,21 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft= "0";
           }
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+        }
           </script>
 
     </main>
