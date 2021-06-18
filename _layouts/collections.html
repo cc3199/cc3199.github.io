@@ -14,16 +14,21 @@
         {{ content }}
     </div>
 
-    <main id="maincontent" role="main" class="flex-shrink-0">
-        <div class="sidenav">
-            <h2 class="text-white">Procedures</h2>
-            <a href="/appraisal.html">Appraisal</a>
-            <a href="/collections.html">Collections</a>
-            <a href="/labels.html">Labels</a>
-            <a href="/students.html">Students</a>
-            <a href="/metadata.html">Metadata</a>
-            <a href="/scanning.html">Scanning</a>
-          </div><br>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <h2 class="text-white">Procedures</h2>
+      <a href="/appraisal.html">Appraisal</a>
+      <a href="/collections.html">Collections</a>
+      <a href="/labels.html">Labels</a>
+      <a href="/students.html">Students</a>
+      <a href="/metadata.html">Metadata</a>
+      <a href="/scanning.html">Scanning</a>
+    </div>
+    
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
+  <div id="main">
 
           <div class="container">
             <h2>Collections</h2>
@@ -32,6 +37,20 @@
             The value of collection contents changes over time. The emergence of new technologies supplants the need for physical copies of certain data. Periodic collection reviews determine the ongoing value and public use of the collection.
             </p><hr><br>
         </div>
+
+      </div>
+
+      <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+          }
+          </script>
 
     </main>
     {% include footer.html %}

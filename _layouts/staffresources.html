@@ -14,88 +14,42 @@
         {{ content }}
     </div>
 
-    <div id="wrapper">
-      <div class="overlay"></div>
-       
-           <!-- Sidebar -->
-       <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-        <ul class="nav sidebar-nav">
-          <div class="sidebar-header">
-          <div class="sidebar-brand">
-            <a href="#">Brand</a></div></div>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown">
-          <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">Works <span class="caret"></span></a>
-        <ul class="dropdown-menu animated fadeInLeft" role="menu">
-         <div class="dropdown-header">Dropdown heading</div>
-         <li><a href="#pictures">Pictures</a></li>
-         <li><a href="#videos">Videeos</a></li>
-         <li><a href="#books">Books</a></li>
-         <li><a href="#art">Art</a></li>
-         <li><a href="#awards">Awards</a></li>
-         </ul>
-         </li>
-         <li><a href="#services">Services</a></li>
-         <li><a href="#contact">Contact</a></li>
-         <li><a href="#followme">Follow me</a></li>
-         </ul>
-     </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Procedures</h2>
+        <a href="/appraisal.html">Appraisal</a>
+        <a href="/collections.html">Collections</a>
+        <a href="/labels.html">Labels</a>
+        <a href="/students.html">Students</a>
+        <a href="/metadata.html">Metadata</a>
+        <a href="/scanning.html">Scanning</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
-      <!-- Page Content  -->
-      <div id="content">
-
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
-
-                  <button type="button" id="sidebarCollapse" class="btn btn-info">
-                      <i class="fas fa-align-left"></i>
-                      <span>Toggle Sidebar</span>
-                  </button>
-                  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <i class="fas fa-align-justify"></i>
-                  </button>
-
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="nav navbar-nav ml-auto">
-                          <li class="nav-item active">
-                              <a class="nav-link" href="#">Page</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Page</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Page</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Page</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-
-    <main id="maincontent" role="main" class="flex-shrink-0">
-        <div class="sidenav">
-            <h2 class="text-white">Procedures</h2>
-            <a href="/appraisal.html">Appraisal</a>
-            <a href="/collections.html">Collections</a>
-            <a href="/labels.html">Labels</a>
-            <a href="/students.html">Students</a>
-            <a href="/metadata.html">Metadata</a>
-            <a href="/scanning.html">Scanning</a>
-          </div><br>
+    <div id="main">
 
         <div class="container">
             <h2>Data Preservation Mission Statement</h2>
             <p>In 1919, the Montana Legislature created the Montana Bureau of Mines and Geology (MBMG or Bureau).  The Bureau’s mission is to collect, maintain, manage, and preserve information having enduring historic, research, and informational value, make the information available to the public, and dispose information whose enduring value has expired.<br><br>
             The Montana Bureau of Mines and Geology collects geologic and mineral, specimens, geologic, hydrologic, seismic, and mining-related historical photographs, reports, and analysis pertaining to the State of Montana.<br><br>
             MBMG created a data preservation program and Archives department that assesses, acquires, organizes, restores, and preserves historic mining, geologic, hydrogeologic, mineral, and seismic information pertaining to the state of Montana.  The MBMG Data Preservation Program makes this information available to the public, in both physical and electronic formats for education and research purposes.
-            </p><hr><br>
+            </p>
         </div>
+    </div>
 
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
 
     </main>
     {% include footer.html %}
