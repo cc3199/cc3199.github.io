@@ -9,27 +9,28 @@
     {% include collection-nav.html %}
     
     <div class="container">
-        <h1>Photoshop Tips and Tricks</h1>
 
         {{content}}
 
-    <main id="maincontent" role="main" class="flex-shrink-0">
-    <div class="container">
-        {{ content }}
     </div>
 
-    <main id="maincontent" role="main" class="flex-shrink-0">
-        <div class="container">
-        <div class="card mb-9">
-            <h2 style="text-align:center">Follow links below for Extra Photoshop Pointers</h2>
-                <a class="btn btn-secondary btn-lg btn-block" href="#dust" role="button">Dust and Scratches Filter</a>    
-                <a class="btn btn-secondary btn-lg btn-block" href="#patternstamp" role="button">Pattern Stamp</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#brush" role="button">Brush Tool</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#bendtext" role="button">Bend Text</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#puppetwarp" role="button">Puppet Warp</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#erasedots" role="button">Erasing Background Dots</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#shared" role="button">Shared Tips</a>
-        </div><hr><br>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">File Extras</h2>
+        <a href="#dust">Dust and Scratches</a>
+        <a href="#patternstamp">Pattern Stamp</a>
+        <a href="#brush">Brush Tool</a>
+        <a href="#bendtext">Bend Text</a>
+        <a href="#puppetwarp">Puppet Warp</a>
+        <a href="#erasedots">Erase Dots</a>
+        <a href="#shared">Shared Tips</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+  
+      <div id="main">
+
+        <h1 style="text-align:center">Photoshop Extras</h1><hr>
 
         <div class="container">
             <h2 id="dust">Dust and Scratches Filter</h2>
@@ -67,8 +68,35 @@
         </div><hr><br>
 
     </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
     
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
     
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+        }
+        </script>
+    
+    </main>
     {% include footer.html %}
     {% include foot.html %}
     {% include scroll-to-top.html %}

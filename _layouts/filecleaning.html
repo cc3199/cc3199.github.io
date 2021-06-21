@@ -9,21 +9,29 @@
     {% include collection-nav.html %}
     <main id="maincontent" role="main" class="flex-shrink-0">
     
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">File Cleaning Techniques</h2>
+        <a href="#duplicating">*Duplicate Layers*</a>
+        <a href="#rotate">Rotate</a>
+        <a href="#crop">Crop</a>
+        <a href="#straighten">Straighten</a>
+        <a href="#curves">Levels and Curves</a>
+        <a href="#dodgeburn">Dodge and Burn</a>
+        <a href="#clonestamp">Clone Stamp</a>
+        <a href="#selection">Selection Tools and Fill</a>
+        <a href="#spothealing">Spot Healing Tool</a>
+        <a href="#patchtool">Patch Tool</a>
+        <a href="#imagesize">*Check Canvas Size*</a>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+  
+      <div id="main">
+      
       <div class="container">
         <h1 style="text-align:center">Photoshop Techniques for Cleaning Files</h1>
-        <p><b>You may use any, all, or none of these techniques for cleaning files based on the condition of the scanned file. The buttons in red are steps that should be completed when cleaning EVERY file. Please see a staff member if you have any questions.</b></p>
-        <a class="btn btn-danger btn-md btn-block" href="#duplicating">Duplicate Layers</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#rotate">Rotating an Image</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#crop">Crop an Image</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#straighten">Straighten an Image</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#curves">Levels and Curves Adjustments</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#dodgeburn">Dodge and Burn Tools</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#clonestamp">Clone Stamp Tool</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#selection">Selection Tools and Fill</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#spothealing">Spot Healing Tool</a>
-        <a class="btn btn-secondary btn-md btn-block" href="#patchtool">Patch Tool</a>
-        <a class="btn btn-danger btn-md btn-block" href="#imagesize">Check Canvas Size</a>
-    </div>
+        <p><b>You may use any, all, or none of these techniques for cleaning files based on the condition of the scanned file. The pages marked with asterisks are steps that should be completed when cleaning EVERY file. Please see a staff member if you have any questions.</b></p>
     <hr>
 
     <div class="container">
@@ -257,8 +265,34 @@
           </div>
         </div>
 
-
-    </main>
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+          }
+      
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+          var i;
+      
+          for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+          }
+          </script>
+    
+      </main>
     {% include footer.html %}
     {% include foot.html %}
     {% include scroll-to-top.html %}

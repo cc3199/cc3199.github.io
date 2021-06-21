@@ -12,19 +12,29 @@
         {{ content }}
     </div>
 
-    <main id="maincontent" role="main" class="flex-shrink-0">
-        <div class="container">
-        <div class="card mb-9">
-            <h2 style="text-align:center">When creating a new collection, please follow each of the steps in gray. For adding items to a collection, please follow the steps in green below.</h2>
-                <a class="btn btn-secondary btn-lg btn-block" href="#setup" role="button">Getting Set Up</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#serving" role="button">Serving your Website</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#metadata" role="button">Creating Metadata</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#open" role="button">Opening Collection in Text Editor</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#config" role="button">Config.yml File</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#theme" role="button">Theme.yml File</a>
-                <a class="btn btn-success btn-lg btn-block" href="#addmetadata" role="button">Adding Metadata</a>
-                <a class="btn btn-success btn-lg btn-block" href="#objects" role="button">Adding Objects</a>
-        </div><hr><br>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <h2 class="text-white">MBMG Modifications</h2>
+      <a href="#setup">Setup</a>
+      <a href="#serving">Serving</a>
+      <a href="#metadata">Metadata</a>
+      <a href="#open">Edit Collection</a>
+      <a href="#config">Config.yml</a>
+      <a href="#theme">Theme.yml</a>
+      <button class="dropdown-btn">Add to Collection 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#addmetadata">Add Metadata</a>
+          <a href="#objects">Add Objects</a>
+        </div>
+    </div>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
+    <div id="main">
+
+      <h1 style="text-align:center">MBMG Modifications</h1><hr>
         
 <div class="container">
   <h2 id="setup">How to Get Set Up</h2>
@@ -180,6 +190,33 @@
     </li>
   </ol>
   </div><hr><br>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+    }
+    </script>
 
 </main>
 {% include footer.html %}

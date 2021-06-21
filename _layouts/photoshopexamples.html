@@ -9,22 +9,26 @@
     {% include collection-nav.html %}
     
     <div class="container">
-        <h1>Photoshop Tips and Tricks</h1>
 
         {{content}}
 
     </div>
 
-    <main id="maincontent" role="main" class="flex-shrink-0">
-        <div class="container">
-        <div class="card mb-9">
-            <h2 style="text-align:center">Follow links below for Tool Use Examples</h2>
-                <a class="btn btn-secondary btn-lg btn-block" href="#lasso" role="button">Lasso Tool</a>    
-                <a class="btn btn-secondary btn-lg btn-block" href="#selection" role="button">Various Selection Tools</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#healingbrush" role="button">Healing Brush</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#spotheal" role="button">Spot Healing and Patch Tool</a>
-                <a class="btn btn-secondary btn-lg btn-block" href="#dodgeburn" role="button">Dodge, Burn, and Clone Stamp</a>
-        </div><hr><br>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">File Cleaning Techniques</h2>
+        <a href="#lasso">Lasso Tool</a>
+        <a href="#selection">Selection Tools</a>
+        <a href="#healingbrush">Healing Brush</a>
+        <a href="#spotheal">Spot Heal and Patch</a>
+        <a href="#dodgeburn">Dodge, Burn, Clone</a>
+    </div>
+
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+  
+      <div id="main">
+
+        <h1 style="text-align:center">Photoshop File Cleaning Examples</h1><hr>
 
         <div class="container">
             <h2 id="lasso">Lasso Tool</h2>
@@ -52,8 +56,35 @@
         </div><hr><br>
 
     </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
     
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
     
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+        }
+        </script>
+    
+    </main>
     {% include footer.html %}
     {% include foot.html %}
     {% include scroll-to-top.html %}
