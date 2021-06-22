@@ -14,12 +14,11 @@
 
     <main id="maincontent" role="main" class="flex-shrink-0">
         <div class="container">
-        <div class="card mb-9">
             <h1 style="text-align:center">Steps to setting up and installing software necessary for building collections in CollectionBuilder. You will have to follow each step carefully.</h1>
             <br>
         <div class="container">
             <h2 id="texteditor">Installing the Software</h2>
-            <div> Please follow all of the instructions in the window below for installing software. Be sure to go through all of the tabs in the side navigation bar to install everything necessary. This includes the software installation under the 'Optional Software' tab.
+            <div> Please follow all of the instructions in the window below for installing software. Be sure to go through all of the tabs in the side navigation bar to install everything necessary.
             </div>
             <div class="alert alert-danger" role="alert">
                 When following the CollectBuilder documentation, follow instructions for Stand-Alone (or SA) users. Ignore instructions for GH or Skin users.
@@ -27,7 +26,22 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://collectionbuilder.github.io/cb-docs/docs/software/" allowfullscreen></iframe>
               </div>
-        </div>
+        </div><hr><br>
+
+        <div class="container">
+          <h2>CollectionBuilder SA Software - ImageMagick and Ghostscript</h2>
+          <p>Most (but not all!) CollectionBuilder projects will involve working with a collection of digital objects, i.e. JPEGs, PDFs, MP3s, etc. We use the software listed below to batch process digital files for use in CollectionBuilder-SA and -CSV projects.</p>
+          <p>SA and CSV templates include a Rake task that automates creating derivative images for PDF and image items. Rake is a standard part of all Ruby installs, so if you are using Jekyll, you have it installed already!<br><br>
+          However, to use CollectionBuilder’s <code>generate_derivatives</code> task you will need the command line tools ImageMagick and Ghostscript installed on your computer. These very popular open source utilities are used in numerous applications and web platforms to provide digital object processing pipelines–and can also be useful for batch processing on your personal computer.</p>
+
+          <h3>Install on Windows</h3>
+          <ul>
+            <li>Visit the <a href="https://imagemagick.org/script/download.php" target="_blank">ImageMagick download page</a> and download the suggested version (the one at the top of the list).<li>This file will be a self contained installer, once downloaded double click to install on your computer following the default options.
+            <li>Visit <a href="https://www.ghostscript.com/download/gsdnld.html" target="_blank">Ghostscript download page</a> and choose the “AGPL release” 64 bit option.
+            <li>This file will be a self contained installer, once downloaded double click to install on your computer following the default options.
+          </ul>
+
+        </div>        
 
     </main>
     {% include footer.html %}
