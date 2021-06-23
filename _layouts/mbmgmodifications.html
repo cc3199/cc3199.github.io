@@ -15,7 +15,7 @@
     <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <span id="menubutton" style="font-size:30px;cursor:pointer" onclick="closeNav(); showmenu()"><i class="material-icons" style="font-size:48px;color:white">close</i></span>
         <h2 class="text-white">MBMG Modifications</h2>
         <a href="#setup">Setup</a>
         <a href="#serving">Serving</a>
@@ -205,7 +205,11 @@
 
     function hidemenu() {
     document.getElementById("menubutton").style.visibility = "hidden";
-}
+    }
+
+    function showmenu() {
+    document.getElementById("menubutton").style.visibility = "visible"; 
+    }
 
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
