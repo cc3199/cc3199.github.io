@@ -12,26 +12,27 @@
         {{ content }}
     </div>
 
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <h2 class="text-white">MBMG Modifications</h2>
-      <a href="#setup">Setup</a>
-      <a href="#serving">Serving</a>
-      <a href="#metadata">Metadata</a>
-      <a href="#open">Edit Collection</a>
-      <a href="#config">Config.yml</a>
-      <a href="#theme">Theme.yml</a>
-      <button class="dropdown-btn">Add to Collection 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-          <a href="#addmetadata">Add Metadata</a>
-          <a href="#objects">Add Objects</a>
-        </div>
-    </div>
-    
-    <span class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">MBMG Modifications</h2>
+        <a href="#setup">Setup</a>
+        <a href="#serving">Serving</a>
+        <a href="#metadata">Metadata</a>
+        <a href="#open">Edit Collection</a>
+        <a href="#config">Config.yml</a>
+        <a href="#theme">Theme.yml</a>
+        <button class="dropdown-btn">Add to Collection 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#addmetadata">Add Metadata</a>
+            <a href="#objects">Add Objects</a>
+          </div>
+          
+      </div>
+    
     <div id="main">
 
       <h1 style="text-align:center">MBMG Modifications</h1><hr>
@@ -202,6 +203,10 @@
       document.getElementById("main").style.marginLeft= "0";
     }
 
+    function hidemenu() {
+    document.getElementById("menubutton").style.visibility = "hidden";
+}
+
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
 
@@ -217,6 +222,7 @@
     });
     }
     </script>
+
 
 </main>
 {% include footer.html %}

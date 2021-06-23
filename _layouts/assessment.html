@@ -14,6 +14,8 @@
         {{ content }}
     </div>
 
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <h2 class="text-white">Procedures</h2>
@@ -31,8 +33,6 @@
         <a href="/forms.html">Forms</a>
           
       </div>
-      
-      <span class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
     <div id="main">
 
@@ -127,7 +127,27 @@
           document.getElementById("mySidenav").style.width = "0";
           document.getElementById("main").style.marginLeft= "0";
         }
+
+        function hidemenu() {
+        document.getElementById("menubutton").style.visibility = "hidden";
+}
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+        }
         </script>
+
 
 
     </main>

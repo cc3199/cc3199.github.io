@@ -43,8 +43,13 @@ a {
     color: rgba(255,255,255,.75);
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
+    color: rgb(255, 255, 255);
 }
+
+.navbar-dark .navbar-nav .active {
+    background-color: #0892b4;
+}
+
 /* footer */
 #footer-credits {
     img { height: 40px; }

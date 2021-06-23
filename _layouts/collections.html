@@ -14,25 +14,25 @@
         {{ content }}
     </div>
 
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <h2 class="text-white">Procedures</h2>
-      <a href="/collections.html">Collections</a>
-      <a href="/assessment.html">Assessment</a>
-      <button class="dropdown-btn">Preservation 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-          <a href="/scanning.html">Scanning</a>
-          <a href="/metadata.html">Metadata</a>
-        </div>
-      <a href="/labels.html">Labels</a>
-      <a href="/students.html">Students</a>
-      <a href="/forms.html">Forms</a>
-        
-    </div>
-    
-    <span class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 class="text-white">Procedures</h2>
+        <a href="/collections.html">Collections</a>
+        <a href="/assessment.html">Assessment</a>
+        <button class="dropdown-btn">Preservation 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/scanning.html">Scanning</a>
+            <a href="/metadata.html">Metadata</a>
+          </div>
+        <a href="/labels.html">Labels</a>
+        <a href="/students.html">Students</a>
+        <a href="/forms.html">Forms</a>
+          
+      </div>
 
   <div id="main">
 
@@ -77,15 +77,19 @@
       </div>
 
       <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-          }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+
+        function hidemenu() {
+        document.getElementById("menubutton").style.visibility = "hidden";
+}
 
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
@@ -101,7 +105,8 @@
         }
         });
         }
-          </script>
+        </script>
+
 
     </main>
     {% include footer.html %}

@@ -14,8 +14,10 @@
         {{ content }}
     </div>
 
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); showmenu()">&times;</a>
         <h2 class="text-white">Procedures</h2>
         <a href="/collections.html">Collections</a>
         <a href="/assessment.html">Assessment</a>
@@ -32,7 +34,6 @@
           
       </div>
       
-      <span class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
     <div id="main">
 
@@ -56,6 +57,14 @@
         function closeNav() {
           document.getElementById("mySidenav").style.width = "0";
           document.getElementById("main").style.marginLeft= "0";
+        }
+
+        function hidemenu() {
+        document.getElementById("menubutton").style.visibility = "hidden";
+        }
+
+        function showmenu() {
+        document.getElementById("showmenu").style.visibility = "visible"; 
         }
 
         var dropdown = document.getElementsByClassName("dropdown-btn");
