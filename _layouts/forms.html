@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
+    <div id="mySidenav" class="sidenav">
+      <span id="menubutton" style="font-size:30px;cursor:pointer" onclick="closeNav(); showmenu()"><i class="material-icons" style="font-size:48px;color:white">close</i></span>
+      
+        <h2 class="text-white">Procedures</h2>
+        <a href="/collections.html">Collections</a>
+        <a href="/assessment.html">Assessment</a>
+        <button class="dropdown-btn">Preservation 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/scanning.html">Scanning</a>
+            <a href="/metadata.html">Metadata</a>
+          </div>
+        <a href="/labels.html">Labels</a>
+        <a href="/students.html">Students</a>
+        <a href="/forms.html">Forms</a>
+      </div>
+      
+      
+
+    <div id="main">
+        <h2 class="text-center">Forms</h2><hr><br>
+    
+        <div class="container">
+        <button class="accordion"><b>Assessment and Donation</b></button>
+        <div class="panel">
+            <a href="/objects/Prospective_Donor_Letter.pdf" download><u>Prospective Donor Letter</u></a><br>
+            <a href="/objects/Preliminary Collection Assessment Criteria.pdf" download><u>Preliminary Collection Assessment Worksheet</u></a><br>
+            <a href="/objects/Preliminary Collection Onsite Assessment.pdf" download><u>Preliminary Onsite Assessment</u></a><br>
+            <a href="objects/Deed_of_Gift.pdf" download><u>Deed of Gift</u></a><br>
+            <a href="/objects/MT_Tech_Gift_in_Kind.pdf" download><u>Montana Tech Gift in Kind</u></a><br>
+        </div>
+        
+        <button class="accordion"><b>Scanning</b></button>
+        <div class="panel">
+            <a href="/objects/Blank Folder Content Sheet.pdf" download><u>Blank Folder Content Sheet</u></a><br>
+        </div>
+        
+        <button class="accordion"><b>Metadata</b></button>
+        <div class="panel">
+            <a href="/objects/Metadata Master Template.xlsx" download><u>Metadata Master Template</u></a><br>
+        </div>
+
+        <button class="accordion"><b>Hiring Students</b></button>
+        <div class="panel">
+            <a href="/objects/Fillable.StudentEmploymentCertification.RevisedDecember2020.pdf" download><u>Student Employment Certification</u></a><br>
+            <a href="/objects/Request for Approval to Exceed 20 hours.pdf" download><u>Request to Exceed 20 Hours</u></a><br>
+        </div>
+    </div>
+
+
+        
+        
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+    
+            function hidemenu() {
+            document.getElementById("menubutton").style.visibility = "hidden";
+            }
+    
+            function showmenu() {
+            document.getElementById("menubutton").style.visibility = "visible"; 
+            }
+    
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+    
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+            }
+
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+             panel.style.maxHeight = null;
+             } else {
+             panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+            </script>
+    
+        </main>
+        {% include footer.html %}
+        {% include foot.html %}
+        {% include scroll-to-top.html %}
+        </body>
+        </html>
