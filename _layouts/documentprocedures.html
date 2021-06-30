@@ -12,8 +12,11 @@
         {{ content }}
     </div>
 
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <span id="menubutton" style="font-size:30px;cursor:pointer" onclick="closeNav(); showmenu()"><i class="material-icons" style="font-size:48px;color:white">close</i></span>
+
         <h2 class="text-white">Procedures</h2>
         <a href="#fileaccess">File Access</a>
         <a href="#cleaning">Document Cleaning</a>
@@ -30,8 +33,6 @@
         <a href="#blankpages">Blank Pages</a>
           
       </div>
-      
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
       <div id="main">
 
@@ -108,7 +109,7 @@
             
             <li>Scan all pages of each document or group of documents. Press "Finish Scan" on the Kyocera scanner to save each group as individual pdf/a scans. The pdf/a scans will be sent to the "Scans" folder.
                 <div class="alert alert-primary" role="alert">
-                    <p class="font-italic">Click <a href="studentprocedures.html#kyocera"><b>here</b></a> for detailed instructions about operating the Kyocera scanner.</p>
+                    <p class="font-italic">Click <a href="studentprocedures.html#kyocera"><u>here</u></a> for detailed instructions about operating the Kyocera scanner.</p>
                 </div>
             </li>
 
@@ -119,7 +120,7 @@
                 </ul>
 
                 <div class="alert alert-warning" role="alert">
-                    <p class="font-italic">Full-time staff will organize and name scanned objects according to established <a href="#filenaming"><b>naming conventions</b></a>.</p>
+                    <p class="font-italic">Full-time staff will organize and name scanned objects according to established <a href="#filenaming"><u>naming conventions</u></a>.</p>
                 </div>
 
             <li>Copy the pdf/a scan into the newly created folder. Delete the scan from the "Scans" folder after ensuring the copy was successful.</li>
@@ -131,14 +132,14 @@
                 PDFs: PDF/A</p>
             </div>
 
-            <li>In the "Originals" folder, each document should be in a PDF/A and JPG file. Use photoshoshop to convert <a href="#pdfa"><b>JPGs to PDF/As</b></a> and <a href="#tojpg"><b>PDF/As to JPGs</b></a>. TIFFs will remain as TIFFs in the Originals folder.</li><br>
+            <li>In the "Originals" folder, each document should be in a PDF/A and JPG file. Use photoshoshop to convert <a href="#pdfa"><u>JPGs to PDF/As</u></a> and <a href="#tojpg"><u>PDF/As to JPGs</u></a>. TIFFs will remain as TIFFs in the Originals folder.</li><br>
 
-            <li>Copy the JPGs from the Originals folder and paste them into the Jpgs folder. The JPGs should not be edited in the Originals folder. Once edits for the JPGs are finished, <a href="tojpf"><b>convert all JPGs to JPFs.</b></a></li><br>
+            <li>Copy the JPGs from the Originals folder and paste them into the Jpgs folder. The JPGs should not be edited in the Originals folder. Once edits for the JPGs are finished, <a href="tojpf"><u>convert all JPGs to JPFs.</u></a></li><br>
 
 
             <li><b>Optimizing Scans:</b> The goal is to ensure the documents are straight and legible.
                 <div class="alert alert-info" role="alert">
-                    <p class="font-italic">Click <a href="filecleaning.html"><b>here</b></a> for more detailed tutorials about Photoshop tools.</p>
+                    <p class="font-italic">Click <a href="filecleaning.html"><u>here</u></a> for more detailed tutorials about Photoshop tools.</p>
                 </div>
 
                 Reference the physical folder as needed when you are optimizing the digital files. When you are not working on that folder, please keep it in your mailbox at the workstations.<br>
@@ -163,12 +164,12 @@
             If the file is returned to you with notes for improvements, when you return the file, please keep all notes with the file.
             
             <div class="alert alert-warning" role="alert">
-                <p class="font-italic">Full-time staff will update the markings on the folder to reflect completed stages of work on that folder. Staff will also <a href="staffresources.html/pdfa"><b>convert and put PDF/A files</b></a> into the PDFs folder.
+                <p class="font-italic">Full-time staff will update the markings on the folder to reflect completed stages of work on that folder. Staff will also <a href="staffresources.html/pdfa"><u>convert and put PDF/A files</u></a> into the PDFs folder.
             </div></li>
 
             <li>Each day, record your hours and work in your Timekeeping and Work Log.</li>
             <div class="alert alert-info" role="alert">
-                <p class="font-italic">Each student has an Excel spreadsheet to record their work. Accurately signing in and out on the left side of the sheet calculates your daily worked hours and assists in completing Montana Tech time cards.<br> In the Work Log portion, please record the work you completed. If you are working on the county property files, please record both the county and the property names. If you are working on a grant funded project, please record that and note the amount of hours in the far right column.<br> Please use the quarter system when filling in hours on your timecards. For more information on this, please refer to the <a href="studentprocedures.html/handbook"><b>Student Handbook</b></a>.
+                <p class="font-italic">Each student has an Excel spreadsheet to record their work. Accurately signing in and out on the left side of the sheet calculates your daily worked hours and assists in completing Montana Tech time cards.<br> In the Work Log portion, please record the work you completed. If you are working on the county property files, please record both the county and the property names. If you are working on a grant funded project, please record that and note the amount of hours in the far right column.<br> Please use the quarter system when filling in hours on your timecards. For more information on this, please refer to the <a href="studentprocedures.html/handbook"><u>Student Handbook</u></a>.
             </div>
         </ol>
         <br><br>
@@ -193,7 +194,7 @@
         <div class="container">
             <h2 id="tojpg">How to Batch Convert Files to JPG in Photoshop</h2>
             <div class="alert alert-danger" role="alert">
-                <p class="font-italic">If you haven't already installed<a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-link" target="_blank">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.</p>
+                <p class="font-italic">If you haven't already installed<a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-link" target="_blank"><u>Document Cleaner 2.0</u></a>, please do so before proceeding beyond this point.</p>
             </div>
             <ol>
                 <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
@@ -212,7 +213,7 @@
                         <li>Action: Select Save as JPEG from dropdown</li>
                         <li>Source: Select Opened files from dropdown</li>
                         <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
-                        <li>File naming: use the <a href="studentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
+                        <li>File naming: use the <a href="studentprocedures.html#filenaming"><u>file naming conventions</u></a> to name your file.</li>
                         <li><b>*This applies to batch converting PDF documents with more than one page*</b> Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.<br>
                         <b>*If you have files that are not grouped pdf files*</b> Fill out the form as indicated in the image below:
                         <img class="rounded mx-auto d-block" src="{{ '/objects/jpgnaming.jpg' | absolute_url }}"><br>
@@ -226,7 +227,7 @@
         <div class="container">
             <h2 id="tojpf">How to Batch Convert Files to JPF in Photoshop</h2>
             <div class="alert alert-danger" role="alert">
-                <p class="font-italic">If you haven't already installed <a href="#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.</p>
+                <p class="font-italic">If you haven't already installed <a href="#installcleaner"><u>Document Cleaner 2.0</u></a>, please do so before proceeding beyond this point.</p>
             </div>
             <ol>
                 <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
@@ -241,7 +242,7 @@
                         <li>Action: Select Save as JPF from dropdown</li>
                         <li>Source: Select Opened files from dropdown</li>
                         <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
-                        <li>File naming: use the <a href="studentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
+                        <li>File naming: use the <a href="studentprocedures.html#filenaming"><u>file naming conventions</u></a> to name your file.</li>
                         <li><b>*This applies to batch converting PDF documents with more than one page*</b> Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.<br>
                             <b>*If you have files that are not grouped pdf files*</b> Fill out the form as indicated in the image below:
                             <img class="rounded mx-auto d-block" src="{{ '/objects/jpgnaming.jpg' | absolute_url }}"><br>
@@ -255,7 +256,7 @@
         <div class="container">
             <h2 id="batchedits">How to Create Macros and Conduct Batch Edits in Photoshop</h2>
             <div class="alert alert-danger" role="alert">
-                <p class="font-italic">If you haven't already installed <a href="#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.</p>
+                <p class="font-italic">If you haven't already installed <a href="#installcleaner"><u>Document Cleaner 2.0</u></a>, please do so before proceeding beyond this point.</p>
             </div>
             <ol>
                 <li>Go to Windows>Actions.
@@ -302,6 +303,14 @@
                 function closeNav() {
                   document.getElementById("mySidenav").style.width = "0";
                   document.getElementById("main").style.marginLeft= "0";
+                }
+        
+                function hidemenu() {
+                document.getElementById("menubutton").style.visibility = "hidden";
+                }
+        
+                function showmenu() {
+                document.getElementById("menubutton").style.visibility = "visible"; 
                 }
         
                 var dropdown = document.getElementsByClassName("dropdown-btn");
