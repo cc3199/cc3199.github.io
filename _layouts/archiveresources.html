@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+
+</style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
+
+    <div id="mySidenav" class="sidenav">
+      <span id="menubutton" style="font-size:30px;cursor:pointer" onclick="closeNav(); showmenu()"><i class="material-icons" style="font-size:48px;color:white">close</i></span>
+      
+        <h2 class="text-white">Resources</h2>
+        <a href="#ethics">Ethics</a>
+        <a href="#legal">Legal</a>
+        <a href="#care">Collection Care</a>
+        <a href="#deaccession">Deaccession</a>
+      </div>
+
+    <div id="main">
+
+    <h1 style="text-align:center">Archive Resources</h1><hr>
+
+    <div class="container">
+        <h2 id="ethics">Archive Ethics</h2>
+
+        <div class="container">
+            <iframe src="objects/ethicsguidelines.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div class="container">
+            <iframe src="objects/Framework for Ethical Problems.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div class="container">
+            <iframe src="objects/Hypotheticals.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div>
+            <iframe src="objects/Ethics_handout.pdf" width="100%" height="800px"></iframe>
+        </div>
+    </div><hr><br>
+
+    <div class="container">
+        <h2 id="legal">Legal Issues in Collections Management</h2>
+
+        <div>
+            <iframe src="objects/Legal_resources.pdf" width="100%" height="800px"></iframe>
+        </div>
+    </div><hr><br>
+
+    <div class="container">
+        <h2 id="care">Collection Care</h2>
+
+        <div>
+            <iframe src="objects/Basic Supplies.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div>
+            <iframe src="objects/What to Do When You Cant Afford to Do Anything.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div>
+            <iframe src="objects/When Less is All You Got.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div>
+            <iframe src="objects/HVAC Facts to remember.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div>
+            <iframe src="objects/After Disasters Salvage Recovery.pdf" width="100%" height="800px"></iframe>
+        </div>
+        <div>
+            <iframe src="objects/Oversize Handout.pdf" width="100%" height="800px"></iframe>
+        </div>
+    </div><hr><br>
+
+    <div class="container">
+        <h2 id="deaccession">Deaccession</h2>
+
+        <div>
+            <iframe src="objects/Deaccessions_handout.pdf" width="100%" height="800px"></iframe>
+        </div>
+    </div>
+
+        
+    </div>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+    
+            function hidemenu() {
+            document.getElementById("menubutton").style.visibility = "hidden";
+            }
+    
+            function showmenu() {
+            document.getElementById("menubutton").style.visibility = "visible"; 
+            }
+    
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+    
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+            }
+            </script>
+
+</main>
+{% include footer.html %}
+{% include foot.html %}
+{% include scroll-to-top.html %}
+</body>
+</html>
