@@ -40,52 +40,125 @@
       <h1 class="text-center">References</h1><hr><br>
 
       <div class="container">
-        <h2>Information Request Referral List</h2>
-        <iframe src="objects/Information request referral list.pdf" width="100%" height="1000px"></iframe>
-      </div><hr><br>
+        <button class="accordion"><b>Information Requests</b></button>
+        <div class="panel">
+            <a href="objects/Information request referral list.pdf" target="_blank"><u>Information Request Referral List</u></a><br>
+            <a href="objects/Data Preservation Check Out Procedures.pdf" target="_blank"><u>Document Check Out Procedure</u></a><br>
+            <a href="objects/Anaconda Stack Brochure.pdf" target="_blank"><u>Anaconda Stack Brochure</u></a><br>
+            <a href="objects/how-stake-claim.pdf" target="_blank"><u>How to Stake a Claim</u></a><br>
+            <a href="objects/plsstutorial.pdf" target="_blank"><u>Tutorial on Public Land Survey System Descriptions</u></a><br>
+            <a href="objects/Understanding Mineral Rights.pdf" target="_blank"><u>Understanding Mineral Rights</u></a><br><hr><br>
 
-      <div class="container">
-        <h2>File Access for MBMG and General Public</h2>
-    <iframe src="objects/Data Preservation Check Out Procedures.pdf" width="100%" height="800px"></iframe>
-    </div><hr><br>
+            <div class="container">
+              <h2>General Information Request Process</h2>
+              <h3>SQL Database</h3>
+                <p>This has the information for our county property files, county and collection map files, and claim files. Usually we would look into both property files (pf table) and map files (mf).<br>
+                The claim files (claim main) have basic information about claims that appear, however nominally, in other files (mostly maps). These have primarily geolocation information. We don’t tend to start a search from this table.</p>
+              <h4>-Searching the pf table</h4>
+                  <p>Typically we search “any part of field” to allow for the variants that might occur in either the naming or the entering of the name. If you are starting with a name of a mine:<br>
+                  You can begin refining by county, especially if it is a very common mine name like Copper Queen<br>
+                  The mining claim field is the field for the mine name.  In addition to searching here for a name, you will want to look at associated names.<br>
+                  Inquiries sometimes start with TRS information.<br>
+                  Using Selection will help refine the search.<br></p>
+              <h4>-Searching the mf table</h4>
+                  <p>Tony includes the property or the collection in the mine name. This hasn’t always been true, so you might have to use geolocation information from claim main or pf.<br>
+                  Otherwise, the search process is similar to property files.</p>
+              <h3>Publications Search</h3>
+                <p>In the Historic folder on the mining archives server, open Publications folder. The database “NU-PubListing” will help locate publications from MBMG and other agencies located in our building. The Billings office also has a library.<br>
+                Our libraries in the NRB are located in our office (217), in Kaleb Scarberry’s office (209) or upstairs across the hall from GWIC.</p>
+              <h3><a href="https://glorecords.blm.gov/"><u>BLM GLO</u></a></h3>
+                <p>This is a good site to check for images of original documents and maps.</p><br>
+
+              <p><b>*Files are located at \\mbmgs1a\Historic\Information Requests References</b> (as of July 2021)</p><hr>
+            </div>
+            
+            <div class="container">
+              <h2>Montana Hard Rock Mining Information</h2>
+              <p>To find "Closed Claims" go <a href="https://www.blm.gov/lr2000/"><u>here</u></a>. There is a tutorial about how to use this site.</p>
+              <p>To look for township, rangd and section for a claim, please use the <a href="http://svc.mt.gov/msl/mtcadastral/"><u>Montana Cadastral</u></a> site.</p>
+              <p>To view information about specific claims patents, view the <a href="https://glorecords.blm.gov/"><u>GLO Records.</u></a></p>
+              <p>Montana <a href="https://deq.mt.gov/mining/assistance"><u>Department of Environmental Quality</u></a> regulates mining in the state.</p>
+              <p>Another resource to locate information about <a href="www.mindat.org/"><u>mining and minerology.</u></a> Also connecting with your local mineral clubs will help you learn more about mining opportunities in your ares.</p>
+              <h4>Useful Montana Bureau of Mines and Geology Publications/Sales</h4>
+                <a href="http://mbmg.mtech.edu/mbmgcat/public/ListCitation.asp?pub_id=11705&" target="_blank"><u>Applied Gold Placer Exploration and Evaluation Techniques</u></a><br>
+                <a href="http://mbmg.mtech.edu/mbmgcat/public/ListCitation.asp?pub_id=11696&" target="_blank"><u>Montana Placer Mining BMPs (Best Management Practices): Guidelines for Planning, Erosion Control, and Reclamation</u></a><br>
+                <a href="http://mbmg.mtech.edu/mbmgcat/public/ListCitation.asp?pub_id=11597&" target="_blank"><u>Gold placers of Montana (reprinted 1987)</u></a><br>
+                <a href="http://mbmg.mtech.edu/mbmgcat/public/ListCitation.asp?pub_id=31115&" target="_blank"><u>Resources for Placer Mining</u></a><br><hr>
+            </div>
+
+            <div class="container">
+              <h2>Mineral Water Rights Ownership</h2>
+                <p>To find out ownership of mineral/water rights, contact the clerk and recorder office of the county.</p><hr>
+            </div>
+
+            <div class="container">
+              <h2>Helpful Websites Index</h2>
+            </div>
+        </div>
+        
+        <button class="accordion"><b>Mining Terms Glossary</b></button>
+        <div class="panel">
+            <a href="/objects/Blank Folder Content Sheet.pdf" download><u>Blank Folder Content Sheet</u></a><br>
+        </div>
+        
+        <button class="accordion"><b>Hiring and Onboarding Procedures</b></button>
+        <div class="panel">
+            <a href="/objects/Metadata Master Template.xlsx" download><u>Metadata Master Template</u></a><br>
+        </div>
+      
 
 
 
       
-      <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
 
-        function hidemenu() {
-        document.getElementById("menubutton").style.visibility = "hidden";
-        }
+      function hidemenu() {
+      document.getElementById("menubutton").style.visibility = "hidden";
+      }
 
-        function showmenu() {
-        document.getElementById("menubutton").style.visibility = "visible"; 
-        }
+      function showmenu() {
+      document.getElementById("menubutton").style.visibility = "visible"; 
+      }
 
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
 
-        for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-        } else {
-        dropdownContent.style.display = "block";
-        }
-        });
-        }
-        </script>
+      for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+      }
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+       panel.style.maxHeight = null;
+       } else {
+       panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+  });
+  }
+      </script>
 
 
 
