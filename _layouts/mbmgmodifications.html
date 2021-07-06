@@ -46,24 +46,24 @@
               Make sure you have all of the <a href="https://collectionbuilder.github.io/cb-docs/docs/software/" target="_blank"><u>software installed</u></a> for the next steps, especially <a href="https://desktop.github.com/" target="_blank"><u>Github Desktop</u></a>.
   </div>
   <ol>
-    <li>Clone the Master branch, if you haven't already. If you have already done this when making a different collection, you do not have to do this again. Go to <a href="https://github.com/cc3199/mbmg-master" target="_blank"><u>the MBMG Github Master code.</u></a> Then you will go to the "code" dropdown and select "Open in Github Desktop". Ensure you have Github Desktop installed before completing this step.
+    <li>Clone the Master branch, if you haven't already. If you have already done this when making a different collection, you do not have to do this again. Go to <a href="https://github.com/cc3199/mbmg-master" target="_blank"><u>the MBMG Github Master code.</u></a> Then you will go to the "code" dropdown and select "Open in Github Desktop". Ensure you have Github Desktop installed before completing this step. This process is called "cloning".
       <img class="rounded mx-auto d-block" src="{{ '/objects/clone master.jpg' | absolute_url }}"><br>
       This will then bring up Github Desktop and a prompt will ask where you want the files to be saved. Usually the default location is fine, but, if the default location does not suit your organization style, you may select a different location and then select "ok."<br>
       <div class="alert alert-info" role="alert">
-      By the way, the master code is a template of sorts for all other collections. Do not edit the master code unless something needs to be changed across ALL collections. You will be creating "branches" that come from the master code and edits unique to that branch will remain in that branch. It will not affect other collections in other branches. For more information about how GitHub branches work, see their <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches" target="_blank"><u>documentation.</u></a>
+      Note: the master code is a template of sorts for all other collections. <b>Do not edit the master code unless something needs to be changed across ALL collections.</b> You will be creating "branches" that come from the master code and edits unique to that branch will remain in that branch. It will not affect other collections in other branches. For more information about how GitHub branches work, see their <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches" target="_blank"><u>documentation.</u></a>
       </div>
     </li><br>
                 
-    <li>Once you have cloned the master, it will auto-open in Github Desktop. Then, you'll create a branch based off the master code. To do this, make sure you are in the mbmg-master repository, then move slightly to the right to select a dropdown menu under "current branch". In this dropdown menu, you will see all of the existing branches, or collections, created from the mbmg-master. To create a new one, select "New Branch" then type the name of your collection in the typing box, then select "Create Branch".
+    <li>Cloning mbmg-master automatically opens it in Github Desktop. Create a branch from the master code. Below the menu ribbon at the top of the page, select the drop-down menu for the “Current branch”. This dropdown menu displays the existing branches (collections), created from the mbmg-master code. To create a new branch, select "New Branch", enter the name of this branch (collection) in the typing box, and select "Create Branch".
     <br>
       <img class="rounded mx-auto d-block" src="{{ '/objects/new branch.jpg' | absolute_url }}">
     </li><br>
       
-    <li>Now you will have a new branch based from the mbmg-master where you will have your collection. Your Github Desktop should look like this:<br>
+    <li>Your new branch based from the mbmg-master code will have your collection. Your Github Desktop should look like this:<br>
       <img class="rounded mx-auto d-block" src="{{ '/objects/publish branch.jpg' | absolute_url }}"><br>
-    Make sure to "Publish branch," which will save it to Github online where it will be viewable online and will be saved in multiple places for security.</li><br>
+      Always click the blue button to "Publish branch” to save it to Github online. This action saves your branch in multiple places both to protect it from loss and to view it online. </li><br>
     </ol>
-    <div class="alert alert-success" role="alert">That's it! You now have an MBMG template for your collection. The next part will walk through opening the files in your text editor to then be able to customize your collection.</div>
+    <div class="alert alert-success" role="alert">That's it! You now have created an MBMG template for your collection. You can now customize your collection template to suit the specific information for that collection. </div>
     <hr>
 </div>
 
@@ -78,9 +78,7 @@
     Once you start adding your own content, configuring, and customizing, you will follow exactly the same method to start the dev server to view your project.</p>
 
   <h3>Open Terminal</h3>
-  <p>To give commands to Jekyll, you will need to have a terminal open in the root of your project folder. Editors like VS Code can open a full folder and provide an integrated terminal to make working on a Jekyll project easier.<br><br>
-
-    If you are using VS Code, open your project repository folder with the editor. Use the keyboard shortcut <code>Ctrl + `</code> (control + backtick “ ` “, the key left of “1” shared with “~”) to open and close the integrated terminal, or click the “View” menu and select “Terminal”. On Windows, please ensure you are using Git Bash (not PowerShell or CMD).</p>
+  <p>If you are using VS Code, open your project repository folder with the editor. Use the keyboard shortcut <code>Ctrl + `</code> (control + backtick “ ` “, the key left of “1” shared with “~”) to open and close the integrated terminal, or click the “View” menu and select “Terminal”. On Windows, please ensure you are using Git Bash (not PowerShell or CMD).</p>
 
   <h3>Bundle Install (1st Time Only)</h3>
     <p>The first time you use this project folder on this computer, type the command: <code>bundle install</code>.<br><br>
@@ -89,15 +87,15 @@
       Although it seems complicated at first, using Bundler helps avoid dependency issues on your system. The “Gemfile.lock” keeps the dependencies consistent to help reproduce the specific environment you are developing in.</p>
 
   <h3>Jekyll Serve</h3>
-  <p>The “jekyll serve” command will start the dev server and generate your site, rebuilding each time you save a file in the project folder. Using the prefix <code>bundle exec </code>ensures that you are using the exact setup recorded in the project’s “Gemfile.lock” (hopefully avoiding dependency issues unexpectedly breaking things).<br>
-    With a terminal (integrated or not) open in your project folder follow these steps:<br>
+  <p>The “jekyll serve” command will start the development server and generate your site, rebuilding each time you save a file in the project folder. Using the prefix <code>bundle exec </code>ensures that you are using the exact setup recorded in the project’s “Gemfile.lock”.<br>
+    With a terminal open in your project folder follow these steps:<br>
     <ol>
     <li>Type the command <code>bundle exec jekyll s</code> and press enter.</li>
     <li>In the terminal you’ll see some text appear (messages from Jekyll), including a URL that appears after the title “Server address:”</li>
-    <li>Hold down Ctrl / Command and click the link to open the site in your browser, or copy the URL and paste it into a browser (we recommend doing this in a private window).</li>
-    <li>When you’re ready to end your Jekyll session, click into the terminal, then type Ctrl + C. This stops the server from running. (This is how to close most command line programs, not just Jekyll!)</li>
+    <li>Hold down Ctrl / Command and click the link to open the site in your browser, or copy the URL and paste it into a browser.</li>
+    <li>When you’re ready to end your Jekyll session, click into the terminal, then type Ctrl + C. This stops the server from running.</li>
     </ol>
-    Tip: always check your terminal for messages. The error messages can be intimidating and confusing–but do often contain useful information!<br>
+    Tip: always check your terminal for messages. Although the error messages can be intimidating and confusing, they often contain useful information.<br>
     
     The “CollectionBuilder Page Generator” plugin creates item pages from your metadata while Jekyll is running. It provides information in the terminal that might help debugging your metadata.<br>
     
@@ -106,8 +104,8 @@
 
 <div class="container">
   <h2 id="metadata">Creating Metadata</h2>
-  <p>The metadata is the most important file for CollectionBuilder. The site will not load images or documents from your collection without it. Also, if you find any errors in the website such as a misspelling or an image not loading, it is most likely going to be due to an error in the metadata, not the code itself.</p>
-  <p>The metadata file is basically a spreadsheet that describes all of the info about each object within the collection. If an object is properly described within this metadata file, it will appear in the website, and will it be searchable. Carefully follow the steps <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/" target="_blank"><u>here</u></a> to create metadata for your collection, and remember to follow any special instructions for SA users!</p>
+  <p><b>The metadata is the most important file for CollectionBuilder.</b> The site will not load images or documents from your collection without it. Also, if you find any errors in the website such as a misspelling or an image not loading, it is most likely going to be due to an error in the metadata, not the code itself.</p>
+  <p>The metadata file is basically a spreadsheet that describes all of the info about each object within the collection. If an object is properly described within this metadata file, it will appear in the website, and will it be searchable. Carefully follow the steps <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/" target="_blank"><u>here</u></a> to create metadata for your collection, and remember to follow any special instructions for SA users.</p>
   <div class="alert alert-info" role="alert">
   If you don't need to create a new metadata file and add metadata content to an existing file instead, please see the instructions on this page about <a href="{{ '/mbmgmodifications.html#addmetadata' | absolute_url }}"><u>adding to existing metadata.</u></a>
 </div><hr>
@@ -115,7 +113,7 @@
 
 <div class="container">
     <h2 id="open">Opening Collection In Text Editor</h2>
-    <p>In GitHub Desktop, navigate to the "Repository" tab at the top, and then select "Open in Text-Editor". It may also say "Open in Visual Studio Code" or name your default text editor. After selecting this, it will bring up your collection web files and you can begin editing.</p>
+    <p>In GitHub Desktop, navigate to the "Repository" tab at the top, and then select "Open in Text-Editor". It may also say "Open in Visual Studio Code" or name your default text editor. Select this to bring up your collections web files and begin editing.</p>
     <img class="rounded mx-auto d-block" src="{{ '/objects/open in text.jpg' | absolute_url }}">
     <hr><br>
 </div>
@@ -126,26 +124,27 @@
         For general info about this file, see the <a href="https://collectionbuilder.github.io/cb-docs/docs/config/" target="_blank"><u>CollectionBuilder docs</u></a>
       </div>
         <ol>
-          <li>To begin, locate and open the _config.yml file in the base of your repository. No matter which version you’re using, this file is used to configure the basics of your site.
+          <li>Open the _config.yml file in the base of your repository. No matter which version you’re using, this file is used to configure the basics of your site.
             <img class="rounded mx-auto d-block" src="{{ '/objects/locate config.jpg' | absolute_url }}">
           </li><br>
 
-          <li>The first section titled "URL Variables" will <u>NOT</u> need to be changed. The following section titled "Site Settings" is where the primary changes will be made in this file. Make sure to delete the existing template text in red, and replace it with your own. 
+          <li>DO NOT CHANGE the section titled “URL Variables.”<br><br>
+             The following section titled "Site Settings" is where the primary changes will be made in this file. Make sure to delete the existing template text in red, and replace it with your own. 
             <ul>
-              <li><b>Title:</b> The title of your collection. This will appear as the title on the home page and on each page's header. </li>
-              <li><b>Tagline:</b> A subtitle of sorts. This will appear underneath the title on the homepage and each page's header. This is optional.</li>
-              <li><b>Description:</b> A couple of sentences or a paragraph briefly describing the collection. This appears on the home page under the featured banner image.</li>
-              <li><b>Author:</b> You may add your name to the MBMG or simply leave as MBMG.
+              <li><b>Title:</b> This is the title of your collection and will appear as the title of your home page and as a header on all other pages.</li>
+              <li><b>Tagline:</b> This optional element functions as a subtitle and will appear on the homepage and in the header on all other pages.</li>
+              <li><b>Description:</b> Include up to a paragraph to briefly describe the collection. This appears on the home page under the featured banner image.</li>
+              <li><b>Author:</b> Leave this as MBMG.
               <li><b>Keywords:</b> Enter a few keywords that match your collection separated by a semicolon, such as montana;geology;photographs; etc.</li>
             </ul>
             <div class="alert alert-danger" role="alert">
-              The organization name, link, logo-banner, and logo-nav DO NOT need to be changed. This has already been entered in correctly for MBMG use.
+              DO NOT change the organization name, link, logo-banner, and logo-nav. These are entered correctly for MBMG use.
             </div><br>
             <img class="rounded mx-auto d-block" src="{{ '/objects/site settings.jpg' | absolute_url }}">
           </li><br>
 
-          <li>The following section titled "Collection Settings" only has two components that need to be configured, both dealing with metadata.The first one titled 'metadata' should be changed to the filename of the metadata document created in an earlier step. Be sure to not include the file extension (which should be .csv). <br>
-          Second, under "page_gen," next to "data", again replace the demo metadata with the metadata filename that you created.
+          <li>The only components to configure in "Collection Settings" deal with metadata. Change 'metadata' to the filename of the metadata document created in an earlier step. Do not include the file extension (which should be .csv).<br>
+          Under "page_gen," next to "data", replace “demo metadata” with the metadata filename that you created.
           <img class="rounded mx-auto d-block" src="{{ '/objects/collection settings.jpg' | absolute_url }}">
         </li>
         </ol>
@@ -154,7 +153,7 @@
 
 <div class="container">
   <h2 id="theme">Modifications to the theme.yml file</h2>
-    <p>This file deals mostly with the appearances and images that are displayed on the web pages as well as many other edits. Please follow the <a href="https://collectionbuilder.github.io/cb-docs/docs/theme/" target="_blank"><u>CollectionBuilder documentation</u></a> for help with this file. Reminder to follow any special instructions for SA users.</p>
+    <p>This file determines the appearance and images displayed on the web pages. Please follow the <a href="https://collectionbuilder.github.io/cb-docs/docs/theme/" target="_blank"><u>CollectionBuilder documentation</u></a> for help with this file. Reminder: follow any special instructions for SA users.</p>
       <div class="alert alert-info" role="alert">
         The map page coordinates and zoom should be set to have all of Montana as front and center. This should work for most collections. If your collection should be more localized or it features items in another location, follow CollectionBuilder instructions to change.
       </div><br>
@@ -165,14 +164,13 @@
 <div class="container">
   <h2 id="addmetadata">Adding to Existing Metadata</h2>
   <ol>
-    <li>First, make sure that your collection is <a href="/mbmgmodifications.html#open"><u>open in VS Code</u></a>, or whichever text editor you prefer to use.</li>
-    <li>The easiest way to add metadata is to open the metadata file into a program such as Excel. First, locate your metadata file in your text editor. In this case, the metadata file is the demo-metadata. Right click on the file and select to "Reveal in File Explorer."
+    <li>Locate the metadata file in Visual Studio Code. For demonstration and training, the metadata file is demo-metadata. Right click on the file and select "Reveal in File Explorer."
       <img class="rounded mx-auto d-block" src="{{ '/objects/locate metadata.jpg' | absolute_url }}"><br>
-    This will open your collection files, specifically the "_data" folder where all of the .csv files are stored. Again, locate your collection metadata file and choose to open it in Excel, or other spreadsheet program you are familiar with.
+      This will open your collection files. The "_data" folder stores the .csv files. Locate your collection metadata file, and open it in Excel or another spreadsheet program.
       <img class="rounded mx-auto d-block" src="{{ '/objects/open in excel.jpg' | absolute_url }}"><br>  
     </li>
 
-    <li>Once the file is open, you will see what metadata has already been entered for the previous objects. Follow the same format and patterns as the existing data for your new data. If you need a refresher as to what data is necessary and how to enter it in, see the <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/" target="_blank"><u>CollectionBuilder documentation</u></a>.
+    <li>Follow the same format and styles as the existing data to enter your new data. Review metadata requirements and formats in <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/" target="_blank"><u>CollectionBuilder documentation</u></a>.
     </li>
   </ol>
 </div><hr><br>
@@ -180,14 +178,20 @@
 <div class="container">
   <h2 id="objects">Adding Objects</h2>
   <ol>
-    <li>When adding your collection objects to CollectionBuilder, ensure all of your files match your metadata especially in the "type" and "format" columns, otherwise the objects will display properly on the website. Take all of you collection files and copy and paste them in to the "objects" folder. Your files should be OUTSIDE the "small" and "thumbs" folder. Those will come into play next. Feel free to delete the demo objects; they are solely for demonstration.
+    <li>When adding your collection objects to CollectionBuilder, ensure all of your files match your metadata especially in the "type" and "format" columns, otherwise the objects will not display properly on the website. Take all of your collection files and copy and paste them in to the "objects" folder. Your files should be OUTSIDE the "small" and "thumbs" folder. Those will come into play next. Feel free to delete the demo objects; they are solely for demonstration.
       <img class="rounded mx-auto d-block" src="{{ '/objects/objects.jpg' | absolute_url }}">
     </li><br>
 
-    <li>Next, you will be duplicating the objects into the "small" and "thumbs" folders. Luckily, all of the <a href="/softwareinstall.html"><u>software dependencies</u></a> installed earlier will do all of this for you with a simple script. First, open the terminal in your text editor. In Visual Studio Code, navigate to the "View" tab and down to "Terminal."
+    <li>Use Visual Studio to duplicate your objects in the "small" and "thumbs" folders<br><br>
+
+      Open Visual Studio, navigate to the "View" tab, and down to "Terminal."
+      
       <img class="rounded mx-auto d-block" src="{{ '/objects/terminal.jpg' | absolute_url }}"><br>
 
-    Then, in the terminal, type <code>rake generate_derivatives</code>. This will take all of your objects and move them into the "small" and "thumbs" folders while putting them into the correct format as well. It will take a moment up to a few minutes depending on how many objects you put in. This will only work if your file names properly match the filenames in the metadata. Watch the terminal as it will tell you if any objects failed to convert. If any did fail, double check that your file names match what is entered into the metadata.
+    Type <code>rake generate_derivatives</code>. This script will copy and properly format your objects into the "small" and "thumbs" folders.<br><br>
+
+    If your files do not match the filenames in the metadata, this conversion will not work. The terminal will notify you if any objects failed to convert. 
+    
     </li>
   </ol>
   </div><hr><br>
