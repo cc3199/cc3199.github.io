@@ -136,6 +136,25 @@
   height: 80px;
   padding: 20px;
 }
+
+.pagination a{
+  position: sticky;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  transition: background-color .3s;
+  margin: 8px;
+  padding: 8px 8px;
+}
+
+.pagination a.active {
+  background-color:cadetblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: rgb(190, 190, 190);
+}
   </style>
   </head>
 
