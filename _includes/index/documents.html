@@ -1,6 +1,11 @@
-<a class="card mb-3" href="{{ '/data.html' | relative_url }}">
+<div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title">Collection Items</h5>
-    <p class="card-text">{{ items | size }} objects</p>
+    <h5 class="card-title">CollectionBuilder Terminal Commands</h5>
+    <p class="card-text">
+      Install jekyll:<br> <code>gem install jekyll bundler</code><br>
+      Locally serve website:<br> <code>bundle exec jekyll s</code><br>
+      Prepare object files for website:<br> <code>rake generate_derivatives</code><br>
+      Update software dependencies:<br> <code>bundle update</code>
+    </p>
   </div>
-</a>
+</div>
