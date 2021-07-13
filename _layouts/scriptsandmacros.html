@@ -9,120 +9,167 @@
     {% include collection-nav.html %}
     <main id="maincontent" role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 style="text-align:center">Scripts and Macros Tutorials in Photoshop</h1>
-        <a class="btn btn-secondary btn-lg btn-block" href="#installcleaner" role="button">Install Document Cleaner 2.0</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#tojpg" role="button">How to Batch Convert Files to JPG in Photoshop</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#tojpf" role="button">How to Batch Convert Files to JPF in Photoshop</a>
-        <a class="btn btn-secondary btn-lg btn-block" href="#batchedits" role="button">How to Conduct Batch Edits with Macros</a>
+        {{ content }}
     </div>
-    <hr>
 
-    <div class="container">
-        <h2 id="installcleaner">Install Document Cleaner 2.0</h2>
-        <ol>
-            <li><a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-info btn-lg btn-block" target="_blank">Download Document Cleaner 2.0</a></li>
-            <br>
-            <li>Click on downloaded file.
-    </div><hr><br>
+    <span id="menubutton" class ="sticky-top pt-3" style="font-size:30px;cursor:pointer" onclick="openNav(); hidemenu()"><i class="material-icons" style="font-size:48px;color:black">menu</i></span>
 
-    <div class="container">
-        <h2 id="tojpg">How to Batch Convert Files to JPG in Photoshop</h2>
-        <div class="alert alert-danger" role="alert">
-            If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
-        </div>
-        <ol>
-            <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/open in photoshop.jpg' | absolute_url }}"></li><br>
-            <li><b>*This step for opening PDF files only*</b> Hold down the <code>Shift</code> key and select the last page. This will select all of the pages.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/importpdf.jpg' | absolute_url }}"></li><br>
-            <li>Go to File>Automate>Batch.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
-            
-            <li>Fill out the form as indicated in the image below:</li>
-            <img class="rounded mx-auto d-block" src="{{ '/objects/batch_saveasjpg.png' | absolute_url }}"><br>
-                <ol>
-                    <li>Set: Select Document Cleaner 2.0 from dropdown</li>
-                    <li>Action: Select Save as JPEG from dropdown</li>
-                    <li>Source: Select Opened files from dropdown</li>
-                    <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
-                    <li>File naming: use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
-                    <li><b>*This applies to batch converting PDF documents with more than one page*</b> Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.<br>
-                    <b>*If you have files that are not grouped pdf files*</b> Fill out the form as indicated in the image below:
-                    <img class="rounded mx-auto d-block" src="{{ '/objects/jpgnaming.jpg' | absolute_url }}"><br>
-                    Same steps as the previous image, only the 'File Naming' section is different with only 'Document Name' selected from the dropdown.</li>
-                </ol><br>
-            
-            <li>Select ‘OK’ and let Photoshop do all of the work for you!</li>
-        </ol>
-    </div><hr><br>
+    <div id="mySidenav" class="sidenav">
+      <span id="menubutton" style="font-size:30px;cursor:pointer" onclick="closeNav(); showmenu()"><i class="material-icons" style="font-size:48px;color:white">close</i></span>
 
-    <div class="container">
-        <h2 id="tojpf">How to Batch Convert Files to JPF in Photoshop</h2>
-        <div class="alert alert-danger" role="alert">
-            If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
-        </div>
-        <ol>
-            <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/open in photoshop.jpg' | absolute_url }}"></li><br>
-            <li><b>*This step for opening PDF files only*</b> Hold down the <code>Shift</code> key and select the last page. This will select all of the pages.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/importpdf.jpg' | absolute_url }}"></li><br>
-            <li>Go to File>Automate>Batch.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
-            
-            <li>Fill out the form as indicated in the image below:</li>
-            <img class="rounded mx-auto d-block" src="{{ '/objects/convertjpf.jpg' | absolute_url }}"><br>
-                <ol>
-                    <li>Set: Select Document Cleaner 2.0 from dropdown</li>
-                    <li>Action: Select Save as JPF from dropdown</li>
-                    <li>Source: Select Opened files from dropdown</li>
-                    <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
-                    <li>File naming: use the <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#filenaming">file naming conventions</a> to name your file.</li>
-                    <li><b>*This applies to batch converting PDF documents with more than one page*</b> Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.<br>
+        <h2 class="text-white">Scripts and Macros</h2>
+            <a href="installcleaner">Install Macros</a>
+            <a href="#tojpg">To JPG</a>
+            <a href="#tojpf">To JPF</a>
+            <a href="#batchedits">Macro Edits</a>
+      </div>
+
+      <div id="main">
+
+        <h1 style="text-align:center">Scripts and Macros in Photoshop</h1><hr>
+
+        <div class="container">
+            <h2 id="installcleaner">Install Document Cleaner 2.0 Macros</h2>
+            <ol>
+                <li><a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-info btn-lg btn-block" target="_blank">Download Document Cleaner 2.0</a></li>
+                <br>
+                <li>Click on downloaded file.
+        </div><hr><br>
+  
+        <div class="container">
+            <h2 id="tojpg">How to Batch Convert Files to JPG in Photoshop</h2>
+            <div class="alert alert-danger" role="alert">
+                <p class="font-italic">If you haven't already installed<a href="{{ '/objects/Document Cleaner 2.0.atn' | absolute_url }}" class="btn btn-link" target="_blank"><u>Document Cleaner 2.0</u></a>, please do so before proceeding beyond this point.</p>
+            </div>
+            <ol>
+                <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/open in photoshop.jpg' | absolute_url }}"></li><br>
+  
+                <li><b>*For opening PDF files only*</b> Click the first page and hold the <code>Shift</code> key and select the last page. This will select all of the pages.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/importpdf.jpg' | absolute_url }}"></li><br>
+                    
+                <li>Go to File>Automate>Batch.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
+                
+                <li>Fill out the form as indicated in the image below:</li>
+                <img class="rounded mx-auto d-block" src="{{ '/objects/batch_saveasjpg.png' | absolute_url }}"><br>
+                    <ol>
+                        <li>Set: Select Document Cleaner 2.0 from dropdown</li>
+                        <li>Action: Select Save as JPEG from dropdown</li>
+                        <li>Source: Select Opened files from dropdown</li>
+                        <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
+                        <li>File naming: use the <a href="studentprocedures.html#filenaming"><u>file naming conventions</u></a> to name your file.</li>
+                        <li><b>*This applies to batch converting PDF documents with more than one page*</b> Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.<br>
                         <b>*If you have files that are not grouped pdf files*</b> Fill out the form as indicated in the image below:
                         <img class="rounded mx-auto d-block" src="{{ '/objects/jpgnaming.jpg' | absolute_url }}"><br>
                         Same steps as the previous image, only the 'File Naming' section is different with only 'Document Name' selected from the dropdown.</li>
-                    <li>Select 'Ok' and let Photoshop do all of the work for you!</li><br>
                     </ol><br>
-                </ol><br>
-        </ol>
-    </div><hr><br>
-
-    <div class="container">
-        <h2 id="batchedits">How to Create Macros and Conduct Batch Edits in Photoshop</h2>
-        <div class="alert alert-danger" role="alert">
-            If you haven't already installed <a href="https://collectionbuilder.github.io/docs/documentprocedures.html#installcleaner">Document Cleaner 2.0</a>, please do so before proceeding beyond this point.
-        </div>
-        <ol>
-            <li>Go to Windows>Actions.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_1.jpg' | absolute_url }}"></li><br>
-
-            <li> Select the new action icon in the little actions window</li>
-            <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros1.jpg' | absolute_url }}"></li><br>
+                
+                <li>Select ‘OK’ and let Photoshop do all of the work for you!</li>
+            </ol>
+        </div><hr><br>
+  
+        <div class="container">
+            <h2 id="tojpf">How to Batch Convert Files to JPF in Photoshop</h2>
+            <div class="alert alert-danger" role="alert">
+                <p class="font-italic">If you haven't already installed <a href="#installcleaner"><u>Document Cleaner 2.0</u></a>, please do so before proceeding beyond this point.</p>
+            </div>
+            <ol>
+                <li>Open the files you want to convert in Photoshop. Right-click on the file(s) you want to convert, and open with Photoshop.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/open in photoshop.jpg' | absolute_url }}"></li><br>
+                <li>Go to File>Automate>Batch.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
+                
+                <li>Fill out the form as indicated in the image below:</li>
+                <img class="rounded mx-auto d-block" src="{{ '/objects/convertjpf.jpg' | absolute_url }}"><br>
+                    <ol>
+                        <li>Set: Select Document Cleaner 2.0 from dropdown</li>
+                        <li>Action: Select Save as JPF from dropdown</li>
+                        <li>Source: Select Opened files from dropdown</li>
+                        <li>Destination: Select 'Folder' from dropdown and select the folder destination by selecting 'Choose'.</li>
+                        <li>File naming: use the <a href="studentprocedures.html#filenaming"><u>file naming conventions</u></a> to name your file.</li>
+                        <li><b>*This applies to batch converting PDF documents with more than one page*</b> Make sure that at the end of your file name that you have <code>Page_</code> typed with no number following the underscore. The settings beneath the file name will auto fill in the page numbers and add the file extension at the end.<br>
+                            <b>*If you have files that are not grouped pdf files*</b> Fill out the form as indicated in the image below:
+                            <img class="rounded mx-auto d-block" src="{{ '/objects/jpgnaming.jpg' | absolute_url }}"><br>
+                            Same steps as the previous image, only the 'File Naming' section is different with only 'Document Name' selected from the dropdown.</li>
+                        <li>Select 'Ok' and let Photoshop do all of the work for you!</li>
+                        </ol>
+                    </ol>
+            </ol>
+        </div><hr><br>
+  
+        <div class="container">
+            <h2 id="batchedits">How to Create Macros and Conduct Batch Edits in Photoshop</h2>
+            <div class="alert alert-danger" role="alert">
+                <p class="font-italic">If you haven't already installed <a href="#installcleaner"><u>Document Cleaner 2.0</u></a>, please do so before proceeding beyond this point.</p>
+            </div>
+            <ol>
+                <li>Go to Windows>Actions.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_1.jpg' | absolute_url }}"></li><br>
+  
+                <li> Select the new action icon in the little actions window</li>
+                <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros1.jpg' | absolute_url }}"></li><br>
+                
+                <li>Name your action something simple that describes your action and then press "Record."
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros2.jpg' | absolute_url }}"></li><br>
+                    <ul>
+                        <li>Open a file in Photoshop to which you want to do a batch edit. Keep in mind that it has to be done perfectly when recording; no undoing is allowed.</li>
+                    </ul><br>
+                <li>Once finished conducting all of the edits manually, press the square button in the Action Window to stop recording.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros4.jpg' | absolute_url }}">
+                </li>
+                <li>Go to File>Automate>Batch.
+                    <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
+                
+                <li>Fill out the following form as necessary.</li>
+                    <ul>
+                        <li>Select the correct Action, or the action you just created.</li>
+                        <li>Source: You may choose to have the macro apply to files you have opened or entire files an specific folder. Your choice.</li>
+                        <li>Destination: You may choose "Save and Close," which will save and close the file in the same location in which it was opened. Or you may choose "Folder" to specify a different folder to save all the edited pages.</li>
+                        <li>File Naming: You may be able to auto-name your files as long as a single file name can apply to all of the files to go through the macro. Be sure to add a serial number if that is the case.</li>
+                        <li>Make any other settings that you may find applicable to your files.</li>
+                    </ul>
+                <li>Select OK and let Photoshop do the work for you!</li>
+        </div><hr><br>
+  
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
             
-            <li>Name your action something simple that describes your action and then press "Record."
-                <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros2.jpg' | absolute_url }}"></li><br>
-                <ul>
-                    <li>Open a file in Photoshop to which you want to do a batch edit. Keep in mind that it has to be done perfectly when recording; no undoing is allowed.</li>
-                </ul><br>
-            <li>Once finished conducting all of the edits manually, press the square button in the Action Window to stop recording.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/createmacros4.jpg' | absolute_url }}">
-            </li>
-            <li>Go to File>Automate>Batch.
-                <img class="rounded mx-auto d-block" src="{{ '/objects/pdf-batch_3.jpg' | absolute_url }}"></li><br>
-            
-            <li>Fill out the following form as necessary.</li>
-                <ul>
-                    <li>Select the correct Action, or the action you just created.</li>
-                    <li>Source: You may choose to have the macro apply to files you have opened or entire files an specific folder. Your choice.</li>
-                    <li>Destination: You may choose "Save and Close," which will save and close the file in the same location in which it was opened. Or you may choose "Folder" to specify a different folder to save all the edited pages.</li>
-                    <li>File Naming: You may be able to auto-name your files as long as a single file name can apply to all of the files to go through the macro. Be sure to add a serial number if that is the case.</li>
-                    <li>Make any other settings that you may find applicable to your files.</li>
-                </ul>
-            <li>Select OK and let Photoshop do the work for you!</li>
-    </div><hr><br>
-    </main>
-    {% include footer.html %}
-    {% include foot.html %}
-    {% include scroll-to-top.html %}
-  </body>
-</html>
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+        
+            function hidemenu() {
+            document.getElementById("menubutton").style.visibility = "hidden";
+            }
+        
+            function showmenu() {
+            document.getElementById("menubutton").style.visibility = "visible"; 
+            }
+        
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+        
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+            });
+            }
+            </script>
+      
+        </main>
+      {% include footer.html %}
+      {% include foot.html %}
+      {% include scroll-to-top.html %}
+    </body>
+  </html>
